@@ -34,17 +34,17 @@
 				<ul class="right hide-on-med-and-down">
 					<li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
                     <li><a href="#">Cuisine</a></li>
-        
+                {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="#">Admin/Manage Categories</a></li>
                      <li><a href="#">Add Recipe</a></li>
-                    <li><a href="#">Log Out</a></li>
-                
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
                     
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="#">Contact Us</a></li> 
-                
+                {% endif %}
 				</ul>
 			</div>
 		</nav>
@@ -55,16 +55,16 @@
             <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
                     <li><a href="#">All Recipe</a></li>
                     <li><a href="#">Cuisine</a></li>
-                
+                {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="#">Admin/Manage Categories</a></li>
                      <li><a href="#">Add Recipe</a></li>
-                    <li><a href="#">Log Out</a></li>
-                             
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                 {% else %}            
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="#">Contact Us</a></li>
-             
+                {% endif %}
 		</ul>
     </header>
     
