@@ -14,7 +14,61 @@
     <title>Afriq Delish</title>
 </head>
 <body>
+
+    <header>
+        <div class="row purple  lighten-1" style="margin: 0px;text-align: center;">
+            <div class="col s12 m12">
+                <div class="textShadow" id="main-logo"><a class="head-link" href="{{ url_for('get_recipes') }}">AfriC &amp;
+                        delisH
+                    </a>                 
+                </div>
+                <h6><small>Our ethnic, our style</small></h6>
+            </div>
+        </div>
+
+
+        <nav class="nav-extended text-shadow  purple lighten-3">
+			<div class="nav-wrapper">
+	
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+                    <li><a href="#">Cuisine</a></li>
+        
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Admin/Manage Categories</a></li>
+                     <li><a href="#">Add Recipe</a></li>
+                    <li><a href="#">Log Out</a></li>
+                
+                    
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Contact Us</a></li> 
+                
+				</ul>
+			</div>
+		</nav>
+
+        <!-- mobile sidenav -->
+		<ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align purple-text accent-1">AfriC &amp; delisH</h4></li>
+            <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+                    <li><a href="#">All Recipe</a></li>
+                    <li><a href="#">Cuisine</a></li>
+                
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Admin/Manage Categories</a></li>
+                     <li><a href="#">Add Recipe</a></li>
+                    <li><a href="#">Log Out</a></li>
+                             
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Contact Us</a></li>
+             
+		</ul>
+    </header>
     
+
     <h1>I am here to stay</h1>
 {% block content %}<br>
 {% endblock %}
