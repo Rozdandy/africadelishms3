@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="input-field col s12">
                      <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$" class="validate" required>
+                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$" minlength="5" maxlength="50" class="validate" required>
                     <label for="recipe_name">Recipe name</label>
                 </div>
             </div>
@@ -128,8 +128,8 @@
                 <div class="input-field col s12">
                     <i class="fas fa-hourglass-half purple-text material-icons prefix" aria-hidden="true"></i>
                     <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
-                    <label for="prep_duration">Prepping time (in minutes)</label>
-                    <span class="helper-text" data-error="enter valid number" data-success="right">For examle: 30</span>
+                    <label for="prep_duration">Preping time (in minutes)</label>
+                    <span class="helper-text" data-error="enter valid number" data-success="right">For example: 30</span>
                 </div>
             </div>
 
@@ -166,39 +166,39 @@
 
 
 <!-- Cooking directions  -->
-          <div class="row card z-depth-2 recipe-card new-recipe">
-
-                 <h4 class="font-special bold upper text-shadow-2 center-align">Directions</h4>
-
+            <div class="row card z-depth-2 recipe-card new-recipe">
             
-
+                <h4 class="font-special bold upper text-shadow-2 center-align">Directions</h4>
+            
+            
+            
                 <div class="new-direction direction row">
-
-                <!-- direction -->
-                <div class="input-field col s11">
-                    <i class="fas fa-list-ol purple-text material-icons prefix" aria-hidden="true"></i>
-                    <textarea id="cook_direction" name="directions" autocomplete="off" minlength="5" maxlength="500"
-                        class="cook_direction validate materialize-textarea"
-                        placeholder="list each direction one per line" required></textarea>
-                    <label for="cook_direction">
-                        <span class="red-text">*</span>
-                        required
-                    </label>
+            
+                    <!-- direction -->
+                    <div class="input-field col s11">
+                        <i class="fas fa-list-ol purple-text material-icons prefix" aria-hidden="true"></i>
+                        <textarea id="cook_direction" name="directions" autocomplete="off" minlength="5" maxlength="500"
+                            class="cook_direction validate materialize-textarea" placeholder="list each direction one per line"
+                            required></textarea>
+                        <label for="cook_direction">
+                            <span class="red-text">*</span>
+                            required
+                        </label>
+                    </div>
+            
+                    <!-- add another direction -->
+                    <button type="button" class="add-direction btn purple text-shadow-2">
+                        <i class="fas fa-plus material-icons" aria-hidden="true"></i>
+                    </button>
+            
+                    <!-- remove last direction -->
+                    <button type="button" class="remove-direction btn pink lighten-2 text-shadow-2">
+                        <i class="fas fa-minus material-icons" aria-hidden="true"></i>
+                    </button>
+            
                 </div>
-
-                <!-- add another direction -->
-                <button type="button" class="add-direction btn purple text-shadow-2">
-                    <i class="fas fa-plus material-icons" aria-hidden="true"></i>
-                </button>
-    
-                <!-- remove last direction -->
-                <button type="button" class="remove-direction btn pink lighten-2 text-shadow-2">
-                    <i class="fas fa-minus material-icons" aria-hidden="true"></i>
-                </button>
-
+            
             </div>
-
-        </div>
 
 
 
