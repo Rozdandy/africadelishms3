@@ -2,40 +2,80 @@
 {% block content %}
  <!--    HOMEPAGE -->
 
+<div class="container-fluid">
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="{{ url_for('static', filename='images/angolanfeij.jpg') }}">
+                <div class="caption center-align">
+                    <h3>Angolan Feijoada</h3>
+                    <h5 class="light grey-text text-lighten-3">Angolan national favorite dish; Very rich, savory, &amp;
+                        satisfying</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/jollofrice.jpg') }}">
+                <div class="caption left-align">
+                    <h3>Nigerian Jollof Rice</h3>
+                    <h5 class="light grey-text text-lighten-3">Without controversy; Nigerian Jollof Rice, simply the
+                        best
+                    </h5>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/ghanabanku.jpg') }}">
+                <div class="caption right-align">
+                    <h3>Ghanaian Banku</h3>
+                    <h5 class="light grey-text text-lighten-3">Banku and Tilapia; food for the champions</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/zambianshima.jpg') }}">
+                <div class="caption center-align">
+                    <h3>Zambian Nshima</h3>
+                    <h5 class="light grey-text text-lighten-3">Zambian real meal: Nshima and ndiwo</h5>
+                </div>
+            </li>
+        </ul>
 
-<div class="container">
-    <!-- Mobile | recipes  -->
-    <div class="row show-on-small hide-on-med-and-up">
-        <div class="col s12">
-            <h3 class="center-align">Recipes</h3>
-            <div class="row">
-                {% for recipe in mobile_recipes %}
-                <div class="col s12 recipes-display">
-                    <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
-                        <img class="img_url" src="{{ recipe.img_url}}" alt="recipe menu for mobile">
-                        <span class="card-title recipes-title">{{ recipe.recipe_name }}</span>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
     </div>
-    <!-- Desktop and Tablet | recipes  -->
-    <div class="row hide-on-small-only">
-        <div class="col s12">
-            <h3 class="center-align">Recipes</h3>
-            <div class="row">
-                {% for recipe in recipes %}
+</div>
+
+
+<div id="ourProjectss" class="section scrollspy">
+    <div class="container">
+        <h6 class="ourProjects">Recipes</h6>
+        <br>
+        <br>
+        <div class="row">
+ {% for recipe in recipes %}
                 {% if loop.index<=3 %}
-                <div class="col s4 menu-display">
-                    <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
-                        <img class="img_recipe" src="{{ recipe.img_url}}" alt="recipe menu for desktop">
-                        <span class="card-title recipes-title">{{ recipe.recipe_name }}</span>
-                    </a>
-                </div>
-                {% endif %}
+
+            <div class="col s12 m4">
+      			
+      			<ul class="demo-3">
+                      
+			    <li>
+			        <figure>
+                        <img src="{{ recipe.img_url }}" class="responsive-img" alt=""/>
+                       
+			            <figcaption>
+			        
+			               <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><h2>{{ recipe.recipe_name }}</h2></a></p>
+                        </figcaption>
+                        <div> <h2>{{ recipe.recipe_name }}</h2></div>
+			        </figure>
+                </li>
+                
+			</ul>
+	      </div>
+ {% endif %}
                 {% endfor %}
-            </div>
+       </div>
+        <!--row-->
+
+        <div class="center">
+            <a class="waves-effect waves-light btn purple lighten-1" href="{{ url_for('get_recipes', recipe=recipe) }}">View more</a>
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@
 
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
+     $('.scrollspy').scrollSpy();
     // $('.slider').slider();
     // $(".collapsible").collapsible();
     // $("#copyright").text(new Date().getFullYear());
