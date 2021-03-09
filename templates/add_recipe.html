@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Title -->
+    <div class="row">
+        <h3 class="center-align">Add Recipe</h3>
+        <hr class="blackline">
+    </div>
+
+
+
+        <div class="row card-panel grey lighten-5">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
+       
+     <!-- Category name -->
+          <div class="row">
+                <div class="input-field col s12">
+                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Recipe category</label>
+                </div>
+            </div>
+
+    <!-- Add recipes -->
+    
+            <!-- Recipe name -->
+            <div class="row">
+                <div class="input-field col s12">
+                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$" class="validate" required>
+                    <label for="recipe_name">Recipe name</label>
+                </div>
+            </div>
+           
+ 
+              <!-- Country related food name -->
+        
+              <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons deep-purple-text prefix"></i>
+                    <select id="cuisine" name="cuisine" class="validate" required>
+                        <option value="" disabled selected>National Affiliated Cuisine</option>
+                        <option value="Algeria">Algerian</option>
+                        <option value="Angola">Angolan</option>
+                        <option value="Benin">Beninese</option>
+                        <option value="Botswana">Motswana</option>
+                        <option value="Burkina Faso">Burkinabé </option>
+                        <option value="Burundi">Burundian</option>
+                        <option value="Cameroon">Cameroonian</option>
+                        <option value="Canary Islands">Canarians</option>
+                        <option value="Cape Verde">Cape Verdeans</option>
+                        <option value="Central African Republic">Central African</option>
+                        <option value="Chad">Chadian</option>
+                        <option value="Comoros">Comoran</option>
+                        <option value="Congo">Congolese</option>
+                        <option value="Cote DIvoire">Ivorian</option>
+                        <option value="Djibouti">Djiboutians</option>
+                        <option value="Egypt">Egyptian</option>
+                        <option value="Equatorial Guinea">Equatoguinean</option>
+                        <option value="Eritrea">Eritrean</option>
+                        <option value="Ethiopia">Ethiopian</option>
+                        <option value="Gabon">Gabonese</option>
+                        <option value="Gambia">Gambian</option>
+                        <option value="Ghana">Ghanaian</option>
+                        <option value="Guinea">Guinean</option>
+                        <option value="Kenya">Kenyan</option>
+                        <option value="Lesotho">Mosotho</option>
+                        <option value="Liberia">Liberian</option>
+                        <option value="Libya">Libyan</option>
+                        <option value="Madagascar">Malagasy</option>               
+                        <option value="Malawi">Malawian</option>               
+                        <option value="Mali">Malian</option>            
+                        <option value="Mauritania">Mauritanian</option>
+                        <option value="Mauritius">Mauritians</option>
+                        <option value="Morocco">Moroccans</option>
+                        <option value="Mozambique">Mozambicans</option>               
+                        <option value="Nambia">Nambian</option>                  
+                        <option value="Niger">Nigerien</option>
+                        <option value="Nigeria">Nigerian</option> 
+                        <option value="Reunion">Réunionese</option>
+                        <option value="Rwanda">Rwanda</option>                  
+                        <option value="Senegal">Senegalese</option>                 
+                        <option value="Somalia">Somali</option>
+                        <option value="South Africa">South Africa</option>               
+                        <option value="Sudan">Sudanese</option>                 
+                        <option value="Tanzania">Tanzanian</option>
+                        <option value="Togo">Togolese</option>                   
+                        <option value="Tunisia">Tunisian</option>
+                        <option value="Uganda">Ugandan</option>
+                        <option value="Zaire">Zairian</option>
+                        <option value="Zambia">Zambian</option>
+                        <option value="Zimbabwe">Zimbabwean</option>
+                    </select>
+                    <label for="cuisine">Select National Cuisine</label>
+                </div>
+            </div>
+           
+
+            <!-- Upload img URL -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-image purple-text material-icons prefix" aria-hidden="true"></i>
+                    <input id="img_url" name="img_url" type="url" pattern="https?://.+"  class="validate" required>
+                    <label for="img_url">Image url</label>
+                    <span class="helper-text" data-error="enter valid URL" data-success="right"></span>
+                </div>
+            </div>
+
+
+            <!-- Serves -->
+            <div class="row">
+                <div class="input-field col s11">
+                    <input id="adult_plates" name="adult_plates" type="text"  pattern="^[1-9][0-9]*$" class="validate" required>
+                    <label for="adult_plates">How many adult will it serve?</label>
+                    <span class="helper-text" data-error="enter valid number" data-success="right">For example: 2</span>
+                </div>
+            </div>
+
+
+            <!-- Preparation time  -->
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass-half purple-text material-icons prefix" aria-hidden="true"></i>
+                    <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                    <label for="prep_duration">Prepping time (in minutes)</label>
+                    <span class="helper-text" data-error="enter valid number" data-success="right">For examle: 30</span>
+                </div>
+            </div>
+
+
+              <!-- Cooking time  -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass-half purple-text material-icons prefix" aria-hidden="true"></i>
+                    <input id="cook_duration" name="cook_duration" type="text" pattern="^[1-9][0-9]*$" placeholder="X hours X minutes" class="validate" required>
+                    <label for="cook_duration">How long will the actual cooking last?(in minutes)</label>
+                    <span class="helper-text" data-error="enter valid number" data-success="right">For examle: 30</span>
+                </div>
+            </div>
+
+
+            <!-- Ingredients  -->
+            <div class="row">
+                <div class="input-field col s11">
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Write every new ingredient on a new line.</span>
+                </div>
+            </div>
+            
+            
+            <!-- Description  -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left purple-text material-icons prefix" aria-hidden="true"></i>
+                    <textarea id="simple_description" name="simple_description" class="materialize-textarea" autocomplete="off" minlength="20" maxlength="100" data-length="300" placeholder="Description of The Recipe" required></textarea>
+                    <label for="simple_description">Meal Description</label>
+                </div>
+            </div>
+
+
+<!-- Cooking directions  -->
+          <div class="row card z-depth-2 recipe-card new-recipe">
+
+                 <h4 class="font-special bold upper text-shadow-2 center-align">Directions</h4>
+
+            
+
+                <div class="new-direction direction row">
+
+                <!-- direction -->
+                <div class="input-field col s11">
+                    <i class="fas fa-list-ol purple-text material-icons prefix" aria-hidden="true"></i>
+                    <textarea id="cook_direction" name="directions" autocomplete="off" minlength="5" maxlength="500"
+                        class="cook_direction validate materialize-textarea"
+                        placeholder="list each direction one per line" required></textarea>
+                    <label for="cook_direction">
+                        <span class="red-text">*</span>
+                        required
+                    </label>
+                </div>
+
+                <!-- add another direction -->
+                <button type="button" class="add-direction btn purple text-shadow-2">
+                    <i class="fas fa-plus material-icons" aria-hidden="true"></i>
+                </button>
+    
+                <!-- remove last direction -->
+                <button type="button" class="remove-direction btn pink lighten-2 text-shadow-2">
+                    <i class="fas fa-minus material-icons" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Vegan toggle -->
+			<div class="row">
+				<div class="input-field col s12">
+					<div class="switch">
+                        
+						<label for="vegan">
+                               Vegan
+                            <input type="checkbox" id="vegan" name="vegan">
+                            <span class="lever"></span>
+                           <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                        </label>
+                    </div>
+				</div>
+            </div>
+            
+
+             <!-- Date Posted  -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="date_posted" name="date_posted" type="text" class="datepicker validate" required>
+                    <label for="date_posted">Date Posted</label>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+    <div class="row">
+        <div class="col s11">
+            <button type="submit" class="col s4 btn-small custom-btn">Add recipe</button>
+            <a class = "col s3 btn-small custom-btn center-align" href="{{ url_for('get_recipes')  }}">
+                cancel
+
+            </a>
+        </div>
+        
+    </div>
+
+
+
+
+    </form>
+  </div>
+
+{% endblock %}
