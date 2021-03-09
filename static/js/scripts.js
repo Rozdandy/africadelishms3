@@ -49,39 +49,39 @@ $(document).ready(function () {
 
 
 
-// // add new cloned 'direction'
-//     $(".add-direction").on("click", function () {
-//         addDirection($(this).parent(".new-direction"));
-//     });
-//     function addDirection(thisObj) {
-//         // clone and remove existing values
-//         $(".new-direction:first").clone(true, true).insertAfter(thisObj).find("textarea").val("");
-//         directionCount += 1;
-//         // custom Materialize validation (not built-in natively)
-//         thisObj.closest("div").find("textarea").focus();
-//         disableRemoveDirection();
-//         validateMaterializeSelect();
-//         thisObj.next("div").find("textarea").focus();
-//         // end custom validation
-//     }
+// add new cloned 'direction'
+    $(".add-direction").on("click", function () {
+        addDirection($(this).parent(".new-direction"));
+    });
+    function addDirection(thisObj) {
+        // clone and remove existing values
+        $(".new-direction:first").clone(true, true).insertAfter(thisObj).find("textarea").val("");
+        directionCount += 1;
+        // custom Materialize validation (not built-in natively)
+        thisObj.closest("div").find("textarea").focus();
+        disableRemoveDirection();
+        validateMaterializeSelect();
+        thisObj.next("div").find("textarea").focus();
+        // end custom validation
+    }
 
 
-    // // delete selected 'direction'
-    // $(".remove-direction").on("click", function () {
-    //     removeDirection($(this).parent(".new-direction"));
-    // });
-    // function removeDirection(thisObj) {
-    //     $(thisObj).remove();
-    //     directionCount -= 1;
-    //     disableRemoveDirection();
-    // }
-    // // disable 'remove-direction' if only one direction exists
-    // let directionCount = $(".direction").length;
-    // disableRemoveDirection();
-    // function disableRemoveDirection() {
-    //     if (directionCount === 1) {
-    //         $("button.remove-direction").prop("disabled", true);
-    //     } else {
-    //         $("button.remove-direction").prop("disabled", false);
-    //     }
-    // }
+    // delete selected 'direction'
+    $(".remove-direction").on("click", function () {
+        removeDirection($(this).parent(".new-direction"));
+    });
+    function removeDirection(thisObj) {
+        $(thisObj).remove();
+        directionCount -= 1;
+        disableRemoveDirection();
+    }
+    // disable 'remove-direction' if only one direction exists
+    let directionCount = $(".direction").length;
+    disableRemoveDirection();
+    function disableRemoveDirection() {
+        if (directionCount === 1) {
+            $("button.remove-direction").prop("disabled", true);
+        } else {
+            $("button.remove-direction").prop("disabled", false);
+        }
+    }

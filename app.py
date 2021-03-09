@@ -115,8 +115,29 @@ def get_recipe(recipe_id):
     return render_template("get_recipe.html", recipe=recipe)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        vegan = "on" if request.form.get("vegan") else "off"
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "img_url": request.form.get("img_url"),
+            "simple_description": request.form.get("simple_description"),
+            "vegan": vegan,
+            "prep_duration": request.form.get("prep_duration"),
+            "cook_duration": request.form.get("cook_duration"),
+            "cuisine": request.form.get("cuisine"),
+            "date_posted": request.form.get("date_posted"),
+            "ingredients": request.form.get("ingredients"),
+            "adult_plates": request.form.get("adult_plates"),
+            "cook_direction": request.form.get("cook_direction"),
+            "author": session["user"],
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("get_recipes"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 

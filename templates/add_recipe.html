@@ -177,7 +177,7 @@
                     <!-- direction -->
                     <div class="input-field col s11">
                         <i class="fas fa-list-ol purple-text material-icons prefix" aria-hidden="true"></i>
-                        <textarea id="cook_direction" name="directions" autocomplete="off" minlength="5" maxlength="500"
+                        <textarea id="cook_direction" name="cook_direction" autocomplete="off" minlength="5" maxlength="500"
                             class="cook_direction validate materialize-textarea" placeholder="list each direction one per line"
                             required></textarea>
                         <label for="cook_direction">
@@ -234,14 +234,15 @@
                 </div>
             </div>
 
-            <!-- Submit button -->
+
+            <!-- Submit button- ----->
     <div class="row">
         <div class="col s11">
-            <button type="submit" class="col s4 btn-small custom-btn">Add recipe</button>
+           
             <a class = "col s3 btn-small custom-btn center-align" href="{{ url_for('get_recipes')  }}">
                 cancel
-
             </a>
+             <button type="submit" class="col s4 btn-small custom-btn">Add recipe <i class="fas fa-plus-square right"></i></button>
         </div>
         
     </div>
