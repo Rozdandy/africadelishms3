@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+ <!--    HOMEPAGE -->
+
+
+<div class="container">
+    <!-- Mobile | recipes  -->
+    <div class="row show-on-small hide-on-med-and-up">
+        <div class="col s12">
+            <h3 class="center-align">Recipes</h3>
+            <div class="row">
+                {% for recipe in mobile_recipes %}
+                <div class="col s12 recipes-display">
+                    <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                        <img class="img_url" src="{{ recipe.img_url}}" alt="recipe menu for mobile">
+                        <span class="card-title recipes-title">{{ recipe.recipe_name }}</span>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Desktop and Tablet | recipes  -->
+    <div class="row hide-on-small-only">
+        <div class="col s12">
+            <h3 class="center-align">Recipes</h3>
+            <div class="row">
+                {% for recipe in recipes %}
+                {% if loop.index<=3 %}
+                <div class="col s4 menu-display">
+                    <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                        <img class="img_recipe" src="{{ recipe.img_url}}" alt="recipe menu for desktop">
+                        <span class="card-title recipes-title">{{ recipe.recipe_name }}</span>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+

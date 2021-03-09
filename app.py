@@ -19,19 +19,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
+def index():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
-
-
-# @app.route("/")
-# def index():
-#     recipes = list(mongo.db.recipes.find())
-#     # Shows the first three recipes for mobile
-#     mob_recipes = [recipes[0], recipes[1], recipes[3]]
-#     return render_template(
-#         "index.html", recipes=recipes, mob_recipes=mob_recipes)
+    # Shows the first three recipes for mobile
+    mobile_recipes = mongo.db.recipes.aggregate([{"$sample": {"size": 4}}])
+    return render_template(
+        "index.html", recipes=recipes, mobile_recipes=mobile_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -106,6 +99,20 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/get_recipes")
+def get_recipes():
+    # sort the names of the breads list #
+    recipes = list(mongo.db.recipes.find())
+    flash("All menu")
+    return render_template("get_recipes.html", recipes=recipes)
+
+
+@app.route("/get_recipe/<recipe_id>")
+def get_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("get_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+ <section>
+        <div class="row">
+            <div class="col m10 offset-m1 s10 card-panel grey lighten-5 my_large_card_panel">
+            <div class="white-text text-shadow deep-purple lighten-2 name_db_home">{{ recipe.name }}
+                <a href="{{ url_for('index') }}" class="btn-small deep-purple right">Back</a>
+            </div>
+            <div class="row ingredients_cards">
+                <div class="card small small_ingredients_card">
+                    <div class="deep-purple lighten-2 white-text header_bold">Ingredients</div>
+                    <div>{{ recipe.ingredients }}</div>
+                </div>
+                <div class="card small small_method_card">
+                    <div class="deep-purple lighten-2 white-text header_bold">Instructions</div>
+                    <div>{{ recipe.cook_direction }}</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock %}

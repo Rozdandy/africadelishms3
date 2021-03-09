@@ -1,19 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Am from above</h2>
-    {% for recipe in recipes %}<br>
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.img_url }}<br>
-        {{ recipe.date_posted }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.simple_description }}<br>
-        {{ recipe.cook_duration }}<br>
-        {{ recipe.prep_duration }}<br>
-        {{ recipe.cook_direction }}<br>
-        {{ recipe.vegan }}<br>
-        {{ recipe.adult_plates }}
-        {{ recipe.author }}<br>
-    {% endfor %}
+
     
 {% endblock %}<
