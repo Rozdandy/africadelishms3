@@ -2,37 +2,38 @@
 {% block content %}
 
 
-
 <div id="ourProjectss" class="section scrollspy">
     <div class="container">
         <h6 class="ourProjects">Our projects</h6>
         <br>
         <br>
         <div class="row">
- {% for recipe in recipes %}
+            {% for recipe in recipes %}
 
             <div class="col s12 m4">
-      			
-      			<ul class="demo-3">
-			    <li>
-			        <figure>
-			            <img src="{{ recipe.img_url }}" class="responsive-img" alt=""/>
-			            <figcaption>
-			        
-                           <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><h2>{{ recipe.recipe_name }}</h2></a></p>
-                           <div class="col-6"><i class="fas fa-clock"></i>{{ recipe.cook_duration }}</div>
-                           <div class="col-6"><i class="fas fa-user"></i>{{ recipe.author }}</div>
-                           
-           
 
-			            </figcaption>
-			        </figure>
-			    </li>
-            </ul>
-            
-	      </div>
+                <ul class="demo-3">
+                    <li>
+                        <figure>
+                            <img src="{{ recipe.img_url }}" class="responsive-img" alt="" />
+                            <figcaption>
 
- {% endfor %}
+                                <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                                        <h2>{{ recipe.recipe_name }}</h2>
+                                    </a></p>
+                                <div class="col-6"><i class="fas fa-clock"></i>{{ recipe.cook_duration }}</div>
+                                <div class="col-6"><i class="fas fa-user"></i>{{ recipe.author }}</div>
+
+
+
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+            </div>
+
+            {% endfor %}
         </div>
         <!--row-->
 
