@@ -105,7 +105,14 @@ def logout():
 def get_recipes():
     # sort the names of the breads list #
     recipes = list(mongo.db.recipes.find())
-    flash("All menu")
+    flash("All menus")
+    return render_template("get_recipes.html", recipes=recipes)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("get_recipes.html", recipes=recipes)
 
 
