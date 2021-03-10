@@ -151,6 +151,11 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    # Only users can edit recipes
+    if not session.get("user"):
+        return render_template("error_handle/404.html")
+
+    # Edit recipe to db
     if request.method == "POST":
         vegan = "on" if request.form.get("vegan") else "off"
         edits = {
@@ -187,6 +192,11 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_categories")
 def get_categories():
+    # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("error_handle/404.html")
+
+    # Find categories from db
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("get_categories.html", categories=categories)
 
