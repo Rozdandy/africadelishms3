@@ -7,6 +7,7 @@ $(document).ready(function () {
      $('.scrollspy').scrollSpy();
     $('.slider').slider();
     $(".collapsible").collapsible();
+    $('.parallax').parallax();
     $("#copyright").text(new Date().getFullYear());
     $("select").formSelect();
     $(".datepicker").datepicker({

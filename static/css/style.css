@@ -118,3 +118,47 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
+
+
+.parallax-container{
+	height: 350px;
+}
+
+
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #ab47bc;
+   }
+   .input-field input[type=email]:focus + label {
+     color: #ab47bc;
+   }
+   textarea:focus.materialize-textarea + label {
+   	color: #ab47bc;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #ab47bc;
+     box-shadow: 0 1px 0 0 #ab47bc;
+   }
+   /* label underline focus color */
+   .input-field input[type=email]:focus {
+     border-bottom: 1px solid #ab47bc;
+     box-shadow: 0 1px 0 0 #ab47bc;
+   }
+ .input-field textarea:focus {
+     border-bottom: 1px solid #ab47bc;
+     box-shadow: 0 1px 0 0 #ab47bc;
+   }
+   
+.aboutUs
+{
+	  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 40px/1 "berkshire-swash", Helvetica, sans-serif;
+  color: white;
+ 
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
