@@ -83,12 +83,25 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Only users can access their profile
+    if not session.get("user"):
+        return render_template("error_handle/404.html")
+
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        # Admin has acces to all recipes
+        if session["user"] == "admin":
+            user_recipe = list(mongo.db.recipes.find())
+        else:
+            # user sees own recipes
+            user_recipe = list(
+                mongo.db.recipes.find({"author": session["user"]}))
+
+        return render_template(
+            "profile.html", username=username, user_recipe=user_recipe)
 
     return redirect(url_for("login"))
 
@@ -116,14 +129,28 @@ def search():
     return render_template("get_recipes.html", recipes=recipes)
 
 
+@app.route("/cuisines")
+def cuisines():
+    return render_template("cuisines.html")
+
+
 @app.route("/get_recipe/<recipe_id>")
 def get_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    # recipe id don't exist, show 404 error
+    if not recipe:
+        return render_template("error_handle/404.html")
+
     return render_template("get_recipe.html", recipe=recipe)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # Only users can edit recipes
+    if not session.get("user"):
+        return render_template("error_handle/404.html")
+
     if request.method == "POST":
         vegan = "on" if request.form.get("vegan") else "off"
         recipe = {
@@ -146,6 +173,7 @@ def add_recipe():
         return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
+    cuisines=  mongo.db.cusisines.find().sort("cuisine_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
 
@@ -185,6 +213,7 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    # Delete recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
@@ -203,6 +232,10 @@ def get_categories():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("error_handle/404.html")
+
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -216,6 +249,10 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+     # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("error_handle/404.html")
+
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -230,6 +267,10 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("error_handle/404.html")
+
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
