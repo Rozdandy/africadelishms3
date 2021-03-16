@@ -122,6 +122,31 @@ def get_recipes():
     return render_template("get_recipes.html", recipes=recipes)
 
 
+@app.route("/get_recipez/<category>")
+def get_recipez(category):
+    # Show recipes of that specific category
+    if category == "all":
+        recipes = list(mongo.db.recipes.find())
+    elif category == "breakfast":
+        recipes = list(mongo.db.recipes.find({"category_name": "breakfast"}))
+    elif category == "lunch":
+        recipes = list(mongo.db.recipes.find({"category_name": "Lunch"}))
+    elif category == "dinner":
+        recipes = list(mongo.db.recipes.find({"category_name": "Dinner"}))
+    elif category == "appetizer":
+        recipes = list(mongo.db.recipes.find({"category_name": "Appetizer"}))
+    elif category == "dessert":
+        recipes = list(mongo.db.recipes.find({"category_name": "Dessert"}))
+    elif category == "drink":
+        recipes = list(mongo.db.recipes.find({"category_name": "Drinks"}))
+    elif category == "anytime":
+        recipes = list(mongo.db.recipes.find({"category_name": "Anytime"}))
+    else:
+        recipes = mongo.db.recipe.find({"$text": {"$search": category}})
+    return render_template(
+        "get_recipez.html", recipes=recipes, category=category)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")

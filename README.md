@@ -1,42 +1,234 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Rozdandy,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+### **Website links:** 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+*my github link*: [Rozdandy](https://github.com/Rozdandy/africadelishms3)
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+*Website Link*:
 
-Another blue button should appear to click: *Open Browser*.
+[Afric & delish](https:)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+ There are about 55 countries on the African continent with a population estimated of 1.3 billion. Inspite of the numerous diverse cultures and ethnicities, the African cuisine or recipes is the least pronounced one among other continents of the world. For instance, here in the Netherlands, the African shops and restaurants that sell her recipes are very few in comparison to the asian continents. Does it mean other continents are not very aware of the African uncountable, tasty, relish, healthy, and energtic African recipes? In other instances, due to the diverse cultures and ethnicities, many indegenous African people are not aware of the various food recipes that available to them from other groups.
 
-A blue button should appear to click: *Make Public*,
+Therefore, Afric & delish is an online foodbook where users can surf other African recipes, able to register and also submit their country's cuisine. Afric & delish is a recipe website for people who love to explore continental dishes right in their homes. It avail the opportunity for gourmets and epicures to search for tasty, and palatable different African recipes to prepare for their maximum enjoyment. The concept of the foodbook would allow users to explore the available menus, create theirs, edit or update them and also delete them if they are not needed again. The concept of the   CREATE, READ, UPDATE and DELETE (CRUD) are the crux of the lecture for Milestone three Project at Code Institute, which this project would be built upon.
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
+# **UX (USER EXPERIENCE)**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Project objectives
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+This milestone project is a Data Centric Development module of [Code Institute](https://courses.codeinstitute.net/program/FullstackWebDeveloper)  classes. The aim is to "build an application that allow users to brows, store and access African recipes", using the CRUD operations.
+In order to demonstrate these skills, I have decided to build this Afric & delish website, where Africans could perform the CRUD operations in order to furnish the site with different cuisnes in their countries for other people to emulates the methodologies of the same recipe.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## User stories
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+As a user, I would like to:
+ 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+ *  view the site in any type of devices (mobile, tablet, desktop).
+ *  view all recipes as a visitor.
+ *  limit the number of recipes to display, or see all recipes.
+ *  register to be a member and a regular user.
+ *  be able to log in after registering
+ *  view my own profile.
+ *  add my recipes.
+ *  see instructions on how to add a recipe.
+ *  edit or update my recipes.
+ *  delete my recipes that are not needed again.
+ *  be able to log out.
+ *  be able to search for recipes by names or description.
+ *  see all the different categories of the recipes.
+ *  know the particular African country which the recipe belongs to.
+ *  recieve feedback if scuccessfully performed any of the CRUD operations.
+ *  recieve an error message for perform the activities that is not within the scope of the website or there is an issue with database.
+
+
+#### *Admin Objectives:*
+
+In addition to the aforementioned user objectives above, as an Admin, i would like:
+
+ *  be able add new categories.
+ *  edit categories, in order to update categories.
+ *  delete categories, in order to regulate and coordinates all rescipes.
+
+### Developer objectives
+
+ As a developer, to be able to demonstrate learnt skills in terms of:
+
+ * providing a simple platform where users could perform CRUD operations.
+ * good use of Jinja templating, Python, non-relational database MongoDb
+ * good use materialize library combine with JavaScript knowledge.
+ * how to make the website lives by deploying to Heroku.
+
+
+
+## Design
+
+The concept behind this site is just to enable individual culture and nations across Africa to showcase the various meal recipes in their countries for other people to reciprocate the methodologies. 
+
+#### Fonts
+
+[Google Fonts!](https://fonts.google.com/) Two main fonts were used for the whole sites:
+
+* Supermercado for the body with fall back on san serif.
+* Langar for the headers with fall back on san serif.
+
+
+#### **Colour Scheme**
+
+The developer used [eggradients](https://www.eggradients.com/shades-of-green-color) to choose colors when building the website. Particularly, the follwoing colors were used which are bright to make the site more appealling to sight:
+
+ * #F06292 #F06292 (pink lighten-2 - secondary color)
+ * #9C27B0 #9C27B0 (purple - primary color)
+ * #2196F3 #2196F3 (blue - tertiary color)
+ * #4CAF50 #4CAF50 (green - quaternary color)
+
+
+ ## **Wireframe**
+
+ [Balsamiq App](https://balsamiq.com/) was used for the design architechture and  the site mockups. Although, there were some minor changes in the design but mostly the layout on the app gave the guidance, a step by step guard to build the final website. Below is the link to the wireframe for the desktop and mobile device.
+
+**View all**
+ * [Wireframe](wireframe/mockup.pdf)
+        
+
+
+
+
+
+
+
+
+# **FEATURES**
+
+## Header, Main body divided into sections and Footer, and same as the Game section
+
+  **A responsive mobile first design using a [materialize framework](https://materializecss.com/getting-started.html).**
+
+
+  **Existing Features**
+
+### **1. Register Account:**
+
+* The registeration page allow intended users to register for free to create their own account. For security reason, there is a built-in authorization and    authentication  to check certain criteria to be met before an   account is validated. All passwords are hashed for further securities.
+
+### **2. Log In
+
+* This is for users that registered, more authentication and authorization was embedded to check that the hashed passwords and username if they matched in the database.
+
+### **Log Out
+
+* To enable users to log out of their accounts with a click of the button.
+
+### **View All Recipes
+
+* On the All Recipes link on the Navbar, which will open All recipes page when clicked, it displays all the available recipes on the website.
+
+
+### ** Search Recipes
+
+* A user may want to search for a certain recipe by their name or by their description.
+
+
+
+
+### ** View a Recipe
+
+* This is the Read action of the [CRUD] operation. This could be done when a user or visitor click on a particular menu either from the home page, or from All Recipes' page. The opened menu or recipe will reveal the following:
+  * the author.
+  * date it was posted.
+  * the ingredients, directions, the category of meal and description
+
+
+### ** Add a Recipe
+
+* This is the Create of the [CRUD] operation to add a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. If a user doesn't have a photo to accompany their recipe, I have a built-in function that will automatically assign a cute placeholder image based on the type of dessert category they've selected.
+
+
+
+
+### Future Features to be Implemeneted
+
+
+
+
+
+
+
+
+
+# **TECHNOLOGY USED**
+
+*The follwoing Technologies, Frameworks, and Libraries were used to build the project*  
+
+### Tools  
+
+* **Git**: It was used for version control which uses the Gitpod terminal to commit to Git and Push codes to GitHub
+* **GitHub**:         [GitHub](https://github.com/) Developer used GitHub as a project repository to save.
+* **Gitpod**:         [GitHub](https://www.gitpod.io/) The project used the Gitpod IDE as my workspace to develop the website. It is linked to GitHub repository to store data when coding.
+* **Icons**:          [Font Awesome](https://fontawesome.com/) Social Media Icons were taken from this site.
+* **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
+
+ ## Front-End Technologies
+
+* [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML): HTML/HTML5 the language used to create and as the markup text to add content to the website.  
+* [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS): It provides the styling for the website.
+* [**jQuery 3.4.0**](https://jquery.com/) Used as the main JavaScript functionality.
+* [materialize](https://materializecss.com/getting-started.html) Used to design the  mobile-first responsive layout for the website, forms and accordion.
+
+
+## Back-End Technologies
+*  Flask
+
+    * [**Flask 1.0.2**](https://flask.palletsprojects.com/en/1.1.x/): A microframework used in python.
+    * [**Jinja 2.10**](https://jinja.palletsprojects.com/en/2.10.x/):  Used for templating with Flask.
+    * [**Werkzeug 0.16**](https://werkzeug.palletsprojects.com/en/0.16.x/): Used for password hashing, authentication, and authorization.
+
+* Python
+
+    * [**Python 3.6.7**](https://flask.palletsprojects.com/en/1.1.x/): The main back-end programming language.
+    * [**MongoDB Atlas**](https://www.mongodb.com/): Used to store database in the cloud.
+    * PyMongo
+    
+* Heroku
+
+    * [**Heroku**](https://www.heroku.com/): Used to launch website.
+   
+
+
+
+
+* **CSS validator**:  [CSS validator](https://jigsaw.w3.org/css-validator/) The site was used to test for the validity of my CSS code. 
+* **HTML validator**: [HTML validator](https://validator.w3.org/) The site was used to test for the validity of my HTML code.
+* **Hover.css**:      [Hover.css](https://ianlunn.github.io/Hover/) The site was used on the navigation bar links and Social Media icons in the footer to create an hovering effects.
+* **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
+* **freeformatter**:  [freeformatter](https://www.freeformatter.com/html-formatter.html) The site was used to format HTML.
+* **Lighthouse**:     [Balsamiq](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) To audit the site perfomance and accessibility.
+* **Am I Responsive?**:[Am I Responsive?](http://ami.responsivedesign.is/) It was used to test the responsiveness of the site and to take screenshot of devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 

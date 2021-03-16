@@ -27,6 +27,17 @@
         </div>
 
 
+
+        <ul id="dropdown1" class="dropdown-content">
+                 <li><a href="{{ url_for('get_recipez', category='all') }}">all</a></li>
+                <li><a href="{{ url_for('get_recipez', category='breakfast') }}">Breakfast</a></li>
+                <li><a href="{{ url_for('get_recipez', category='lunch') }}">Lunch</a></li>
+                <li><a href="{{ url_for('get_recipez', category='dinner') }}">Dinner</a></li>
+                <li><a href="{{ url_for('get_recipez', category='appetizer') }}">Appetizer</a></li>
+                <li><a href="{{ url_for('get_recipez', category='dessert') }}">Dessert</a></li>
+                <li><a href="{{ url_for('get_recipez', category='drink') }}">Drinks</a></li>
+                <li><a href="{{ url_for('get_recipez', category='anytime') }}">Anytime</a></li>
+            </ul>
         <nav class="nav-extended text-shadow  purple lighten-3">
 			<div class="nav-wrapper">
 	
@@ -34,7 +45,8 @@
 				<ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('cuisines') }}">cuisines</a></li>
-					<li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+                    <li><a class="dropdown-trigger" href="{{ url_for('get_recipez', category='all') }}" data-target="dropdown1">View All Categories</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         {% if session.user|lower == "admin"|lower %}
@@ -52,11 +64,28 @@
 		</nav>
 
         <!-- mobile sidenav -->
+
+            <ul id="dropdown2" class="dropdown-content">
+                 <li><a href="{{ url_for('get_recipez', category='all') }}">all</a></li>
+                <li><a href="{{ url_for('get_recipez', category='breakfast') }}">Breakfast</a></li>
+                <li><a href="{{ url_for('get_recipez', category='lunch') }}">Lunch</a></li>
+                <li><a href="{{ url_for('get_recipez', category='dinner') }}">Dinner</a></li>
+                <li><a href="{{ url_for('get_recipez', category='appetizer') }}">Appetizer</a></li>
+                <li><a href="{{ url_for('get_recipez', category='dessert') }}">Dessert</a></li>
+                <li><a href="{{ url_for('get_recipez', category='drink') }}">Drinks</a></li>
+                <li><a href="{{ url_for('get_recipez', category='anytime') }}">Anytime</a></li>
+            </ul>
+
+
+
+
+
 		<ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align purple-text accent-1">AfriC &amp; delisH</h4></li>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('cuisines') }}">cuisines</a></li>
             <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+            <li><a class="dropdown-trigger" href="{{ url_for('get_recipez', category='all') }}" data-target="dropdown2">View All Categories</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     {% if session.user|lower == "admin"|lower %}
