@@ -1,4 +1,18 @@
-@import url("https://use.typekit.net/ofu8gcr.css");
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@500&family=Exo+2:wght@300&display=swap');
+
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+    
+
+
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -21,13 +35,50 @@
         /* border-bottom: 0; */
         /* text-transform: uppercase; */
         letter-spacing: 2px;
-        color: #FFFFFF !important;
         text-decoration: none;
         /* line-height: 75px;
         height: 75px; */
         
 
 }
+                                   /* LOGO */
+a.head-link{
+    color: rgb(52, 214, 160);
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 700;
+}
+
+           /* logo extra text */
+h6 > small{
+    color: rgb(226, 210, 210);
+    font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    margin-left: 300px;
+}
+
+nav ul a{
+    color: rgb(175, 233, 212);
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 500;
+      font-size: 20px;
+}
+
+.dropdown-content li,
+.dropdown-content li>a {
+    color: rgb(126, 173, 173);
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 300;
+      font-size: 18px;
+      background-color: #263238;
+}
+
+footer > .footer-copyright {
+
+     border-radius: 25px 25px 0 0;
+}
+
+
 
 
 .demo-3 {
@@ -112,11 +163,12 @@
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   border: none;
-  font: normal 76px/1 "Akronim", Helvetica, sans-serif;
-  color: #ba68c8;
+  font: normal 56px/1 "Berkshire Swash", Helvetica, sans-serif;    
+ color: rgb(52, 214, 160);
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  background-color: #263238;
 }
 
 
@@ -156,9 +208,21 @@
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   border: none;
-  font: normal 40px/1 "berkshire-swash", Helvetica, sans-serif;
+  font-family: 'Berkshire Swash', cursive;
   color: white;
  
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+.aboutUs p{
+font-family: 'Exo 2', sans-serif;
+    
+}
+
+.reset{
+    margin-bottom: 20px;
+}
+
+h4.search-button {
+    margin-top: 40px;
 }

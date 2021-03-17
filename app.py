@@ -118,7 +118,6 @@ def logout():
 def get_recipes():
     # sort the names of the breads list #
     recipes = list(mongo.db.recipes.find())
-    flash("All menus")
     return render_template(
         "get_recipes.html", recipes=recipes)
 

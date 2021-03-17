@@ -4,7 +4,7 @@
 
 <div id="ourProjectss" class="section scrollspy">
     <div class="container">
-        <h6 class="ourProjects">All Recipes</h6>
+        <h6 class="ourProjects hide-on-med-and-down">All Recipes</h6>
         <br>
 
 
@@ -16,14 +16,16 @@
                     <input type="text" name="query" id="query" minlength="3" class="validate" required>
                     <label for="query">Find Recipes</label>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m4 search-btn">
+                    <div class="reset">
                     <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
+                    </div>
+                   <h4 class="search-button"> <button type="submit" class="light-blue darken-1 btn text-shadow">
                         <i class="fas fa-search left"></i> Search
                     </button>
+                  </h4>
                 </div>
-            </div>
-        </form>
+            </div>        </form>
     </div>
 
 
