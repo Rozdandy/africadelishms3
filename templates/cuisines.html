@@ -1,65 +1,30 @@
 {% extends "base.html" %}
-{% block Content %}
- <!-- Country related food name -->
-        
-              <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons deep-purple-text prefix"></i>
-                    <select id="cuisine" name="cuisine" class="validate" required>
-                        <option value="" disabled selected>National Affiliated Cuisine</option>
-                        <option value="Algeria">Algerian</option>
-                        <option value="Angola">Angolan</option>
-                        <option value="Benin">Beninese</option>
-                        <option value="Botswana">Motswana</option>
-                        <option value="Burkina Faso">Burkinabé </option>
-                        <option value="Burundi">Burundian</option>
-                        <option value="Cameroon">Cameroonian</option>
-                        <option value="Canary Islands">Canarians</option>
-                        <option value="Cape Verde">Cape Verdeans</option>
-                        <option value="Central African Republic">Central African</option>
-                        <option value="Chad">Chadian</option>
-                        <option value="Comoros">Comoran</option>
-                        <option value="Congo">Congolese</option>
-                        <option value="Cote DIvoire">Ivorian</option>
-                        <option value="Djibouti">Djiboutians</option>
-                        <option value="Egypt">Egyptian</option>
-                        <option value="Equatorial Guinea">Equatoguinean</option>
-                        <option value="Eritrea">Eritrean</option>
-                        <option value="Ethiopia">Ethiopian</option>
-                        <option value="Gabon">Gabonese</option>
-                        <option value="Gambia">Gambian</option>
-                        <option value="Ghana">Ghanaian</option>
-                        <option value="Guinea">Guinean</option>
-                        <option value="Kenya">Kenyan</option>
-                        <option value="Lesotho">Mosotho</option>
-                        <option value="Liberia">Liberian</option>
-                        <option value="Libya">Libyan</option>
-                        <option value="Madagascar">Malagasy</option>               
-                        <option value="Malawi">Malawian</option>               
-                        <option value="Mali">Malian</option>            
-                        <option value="Mauritania">Mauritanian</option>
-                        <option value="Mauritius">Mauritians</option>
-                        <option value="Morocco">Moroccans</option>
-                        <option value="Mozambique">Mozambicans</option>               
-                        <option value="Nambia">Nambian</option>                  
-                        <option value="Niger">Nigerien</option>
-                        <option value="Nigeria">Nigerian</option> 
-                        <option value="Reunion">Réunionese</option>
-                        <option value="Rwanda">Rwanda</option>                  
-                        <option value="Senegal">Senegalese</option>                 
-                        <option value="Somalia">Somali</option>
-                        <option value="South Africa">South Africa</option>               
-                        <option value="Sudan">Sudanese</option>                 
-                        <option value="Tanzania">Tanzanian</option>
-                        <option value="Togo">Togolese</option>                   
-                        <option value="Tunisia">Tunisian</option>
-                        <option value="Uganda">Ugandan</option>
-                        <option value="Zaire">Zairian</option>
-                        <option value="Zambia">Zambian</option>
-                        <option value="Zimbabwe">Zimbabwean</option>
-                    </select>
-                    <label for="cuisine">Select National Cuisine</label>
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Manage cuisine</h3>
+
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_category') }}" class="btn-large light-blue darken-2 text-shadow">
+                Add cuisine <i class="fas fa-plus-square right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for cuisine in cuisines %}
+            <div class="col s12 m3">
+                <div class="card light-blue darken-4 text-shadow center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ cuisine.cuisine_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn green accent-4">Edit</a>
+                        <a href="#" class="btn light-blue lighten-1">Delete</a>
+                    </div>
                 </div>
             </div>
-           
+        {% endfor %}
+    </div>
+
 {% endblock %}

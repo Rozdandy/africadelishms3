@@ -21,10 +21,10 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     recipes = list(mongo.db.recipes.find())
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     # Shows the first three recipes for mobile
-    mobile_recipes = mongo.db.recipes.aggregate([{"$sample": {"size": 4}}])
     return render_template(
-        "index.html", recipes=recipes, mobile_recipes=mobile_recipes)
+        "index.html", recipes=recipes, cuisines=cuisines)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -119,7 +119,8 @@ def get_recipes():
     # sort the names of the breads list #
     recipes = list(mongo.db.recipes.find())
     flash("All menus")
-    return render_template("get_recipes.html", recipes=recipes)
+    return render_template(
+        "get_recipes.html", recipes=recipes)
 
 
 @app.route("/get_recipez/<category>")
@@ -144,25 +145,27 @@ def get_recipez(category):
     else:
         recipes = mongo.db.recipe.find({"$text": {"$search": category}})
     return render_template(
-        "get_recipez.html", recipes=recipes, category=category)
+        "get_recipez.html",
+        recipes=recipes, category=category)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("get_recipes.html", recipes=recipes)
+    return render_template(
+        "get_recipes.html", recipes=recipes)
 
 
-@app.route("/cuisines")
+@ app.route('/cuisines')
 def cuisines():
-    return render_template("cuisines.html")
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template("cuisines.html", cuisines=cuisines)
 
 
 @app.route("/get_recipe/<recipe_id>")
 def get_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
     # recipe id don't exist, show 404 error
     if not recipe:
         return render_template("error_handle/404.html")
@@ -186,7 +189,7 @@ def add_recipe():
             "vegan": vegan,
             "prep_duration": request.form.get("prep_duration"),
             "cook_duration": request.form.get("cook_duration"),
-            "cuisine": request.form.get("cuisine"),
+            "cuisine_name": request.form.get("cuisine_name"),
             "date_posted": request.form.get("date_posted"),
             "ingredients": request.form.get("ingredients"),
             "adult_plates": request.form.get("adult_plates"),
@@ -198,8 +201,9 @@ def add_recipe():
         return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    cuisines=  mongo.db.cusisines.find().sort("cuisine_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template(
+        "add_recipe.html", categories=categories, cuisines=cuisines)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -219,7 +223,7 @@ def edit_recipe(recipe_id):
             "vegan": vegan,
             "prep_duration": request.form.get("prep_duration"),
             "cook_duration": request.form.get("cook_duration"),
-            "cuisine": request.form.get("cusine"),
+            "cuisine_name": request.form.get("cusine_name"),
             "date_posted": request.form.get("date_posted"),
             "ingredients": request.form.get("ingredients"),
             "adult_plates": request.form.get("adult_plates"),
@@ -252,7 +256,8 @@ def get_categories():
 
     # Find categories from db
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("get_categories.html", categories=categories)
+    return render_template(
+        "get_categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
@@ -287,7 +292,8 @@ def edit_category(category_id):
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template(
+        "edit_category.html", category=category)
 
 
 @app.route("/delete_category/<category_id>")
