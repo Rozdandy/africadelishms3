@@ -2,6 +2,7 @@
 {% block content %}
 
     <br>
+    <!------------------------- Title -->
 
     <div class="row">
         <h3 class="headerz center-align">Add Recipe</h3>
@@ -9,7 +10,7 @@
     
     <div class="container">
         
-    <!-- Title -->
+ 
      
     <br>
 
@@ -17,14 +18,15 @@
         <br>
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
     
-            <!-- Category name -->
+    <!------------------- Category name -->
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix purple-text"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose category</option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name}}">{{ category.category_name }}</option>
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
                     <label for="category_name">Recipe category</label>
@@ -32,64 +34,60 @@
             </div>
     
     
-    
-            <!-- Recipe name -->
+    <!------------------- Recipe name  -->
+        
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix purple-text"></i>
-                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$"
-                        minlength="2" maxlength="100" class="validate" required>
+                    <input id="recipe_name" name="recipe_name" type="text" minlength="2" maxlength="100" class="validate" required>
                     <label for="recipe_name">Recipe name</label>
                 </div>
             </div>
     
     
-    
-            <!-- Description  -->
+    <!------------------Light Description  -->
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left purple-text prefix" aria-hidden="true"></i>
-                    <textarea id="simple_description" name="simple_description" class="materialize-textarea"
-                        autocomplete="off" minlength="10" maxlength="100" data-length="300"
-                        placeholder="Description of The Recipe" required></textarea>
+                    <textarea id="simple_description" name="simple_description" class="materialize-textarea validate"
+                        autocomplete="off" minlength="10" maxlength="300" data-length="300"
+                        placeholder="Shot Description of food delicacy" required></textarea>
                     <label for="simple_description">Meal Description</label>
                 </div>
             </div>
     
     
-            <!-- Country related food name -->
     
+    <!-----------Country related Cuisine --->
     
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix purple-text"></i>
                     <select id="cuisine_name" name="cuisine_name" class="validate" required>
-                        <option value="" disabled selected>Choose cuisine</option>
+                        <option value="" disabled selected>Choose Cuisine</option>
                         {% for cuisine in cuisines %}
                         <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="cuisine_name">cuisine recipe</label>
+                    <label for="cuisine_name">Country Related Cuisine</label>
                 </div>
             </div>
     
+    <!--------------------Upload img URL--->
     
-    
-    
-    
-    
-            <!-- Upload img URL -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-image purple-text prefix" aria-hidden="true"></i>
                     <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate" required>
                     <label for="img_url">Image url</label>
-                    <span class="helper-text" data-error="enter valid URL" data-success="right"></span>
+                    <span class="helper-text" data-error="URL not valid" data-success="right"></span>
                 </div>
             </div>
     
     
-            <!-- Serves -->
+    <!---------------Number it qty can Serve --->
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils purple-text prefix" aria-hidden="true"></i>
@@ -100,8 +98,8 @@
                 </div>
             </div>
     
-    
-            <!-- Preparation time  -->
+
+    <!------------------Preparation time --->
     
             <div class="row">
                 <div class="input-field col s12">
@@ -113,53 +111,46 @@
                 </div>
             </div>
     
-    
-            <!-- Cooking time  -->
+    <!----------------------Cooking time --->
+            
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
                     <input id="cook_duration" name="cook_duration" type="text" pattern="^[1-9][0-9]*$"
-                        placeholder="X hours X minutes" class="validate" required>
+                     class="validate" required>
                     <label for="cook_duration">How long will the actual cooking last?(in minutes)</label>
                     <span class="helper-text" data-error="enter valid number" data-success="right">For examle: 30</span>
                 </div>
             </div>
     
+    <!-----------------------Ingredients--->
     
-            <!-- Ingredients  -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
                     <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
                     <label for="ingredients">Ingredients</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Write every new ingredient on a new
+                    <span class="helper-text" data-error="enter items line by line" data-success="right">Write every new ingredient on a new
                         line.</span>
                 </div>
             </div>
     
     
-            
+    <!---------------Cooking directions--->
     
-    
-            <!-- Cooking directions  -->
-    
-    
-           
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
                         <textarea id="cook_direction" name="cook_direction" class="materialize-textarea validate" required>
                         </textarea>
                         <label for="cook_direction">Directions</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Write every new point on a new
+                        <span class="helper-text" data-error="enter items line by line" data-success="right">Write every new point on a new
                             line by using the Enter Key..</span>
                     </div>
                 </div>
-    
-
-    
-    
-            <!-- Vegan toggle -->
+     
+    <!---------------------Vegan toggle--->
+        
             <div class="row">
                 <div class="input-field col s12">
                     <div class="switch">
@@ -174,8 +165,8 @@
                 </div>
             </div>
     
-    
-            <!-- Date Posted  -->
+    <!---------------------Date Posted--->
+        
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix purple-text" aria-hidden="true"></i>
@@ -184,13 +175,13 @@
                 </div>
             </div>
     
-    
-            <!-- Submit button- ----->
+    <!---------------------Submit button--->
+           
             <div class="row">
                 <div class="col s12 center-align">
     
-                    <a class=" btn-large add-btn center-align" href="{{ url_for('get_recipes')  }}">
-                        cancel
+                    <a class=" btn-large add-btn red darken-2 center-align" href="{{ url_for('get_recipes')  }}">
+                        cancel <i class="fas fa-window-close right"></i>
                     </a>
                     <button type="submit" class="btn-large add-btn">Add recipe <i
                             class="fas fa-plus-square right"></i></button>
@@ -198,10 +189,7 @@
     
             </div>
             <br>
-    
-    
-    
-    
+       
         </form>
     </div>
 </div>
