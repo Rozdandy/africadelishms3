@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <div class="row purple  lighten-1" style="margin: 0px;text-align: center;">
+        <div class="row blue-grey darken-4" style="margin: 0px;text-align: center;">
             <div class="col s12 m12">
                 <div class="textShadow light-red-text text-darken-2" id="main-logo"><a class="head-link" href="{{ url_for('index') }}">AfriC &amp;
                         delisH
@@ -41,17 +41,8 @@
 
 
 
-                                    <ul id="dropdown4" class="dropdown-content">
-                                        {% for cuisine in cuisines %}
-                                        <li>{{ cuisine.cuisine_name }}</li>
-                                        {% endfor %}
-                     </ul>
-
-                                    
-
-
             
-        <nav class="nav-extended text-shadow  purple lighten-3">
+        <nav class="nav-extended text-shadow blue-grey darken-2">
 			<div class="nav-wrapper">
 	
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -59,12 +50,7 @@
                     <li><a href="{{ url_for('index') }}">Home</a></li>
 
 
-                                 
-                    <li><a class="dropdown-trigger" href="{{ url_for('cuisines', cuisines=cuisines) }}" data-target="dropdown4">Native Cuisines</a></li>
-                    
 
-
-                    <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
                     <li><a class="dropdown-trigger" href="{{ url_for('get_recipez', category='all') }}" data-target="dropdown1">View All Categories</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -95,30 +81,22 @@
                 <li><a href="{{ url_for('get_recipez', category='anytime') }}">Anytime</a></li>
             </ul>
 
-                    <ul id="dropdown3" class="dropdown-content">
-                                        {% for cuisine in cuisines %}
-                                        <li>{{ cuisine.cuisine_name }}</li>
-                                        {% endfor %}
-                     </ul>
-         
+               
 
 		<ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align purple-text accent-1">AfriC &amp; delisH</h4></li>
             <li><a href="{{ url_for('index') }}">Home</a></li>
 
-
-                         
-                    <li><a class="dropdown-trigger" href="{{ url_for('cuisines', cuisines=cuisines) }}" data-target="dropdown3">Native Cuisines</a></li>
                  
 
-            <li><a href="{{ url_for('get_recipes') }}">All Recipe</a></li>
+            
             <li><a class="dropdown-trigger" href="{{ url_for('get_recipez', category='all') }}" data-target="dropdown2">View All Categories</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Admin</a></li>
                     {% endif %}
-                     <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    
                      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                  {% else %}            
                     <li><a href="{{ url_for('login') }}">Log In</a></li>

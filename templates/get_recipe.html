@@ -3,33 +3,42 @@
 
 
 
-<div class="container">
-
-    <div class="row">
-        <h3 class="center-align">{{ recipe.recipe_name }}</h3>
-        <hr class="blackline">
-    </div>
-
     <div class="container">
-        <!-- Image and info -->
+    
         <div class="row">
-            <div class="col s4">
-                <h6>Persons: {{ recipe.adult_plates }}</h6>
-                <h6>Prep time: {{ recipe.prep_duration }}</h6>
-                <br>
-                <h6>Category: {{ recipe.category_name }}</h6>
-                <h6>{{ recipe.cuisine }}</h6>
-                <h6><em>Posted by: {{recipe.author}}</em></h6>
-        
-            </div>
-            <div class="col s8">
-                <img class="img_recipe" src="{{ recipe.img_url }}" alt="recipe_image">
-            </div>
+            <h3 class="center-align">{{ recipe.recipe_name }}</h3>
         </div>
-    </div>
+    
+        <br>
+    
+    
+    
+        
+            <!-- Image and info -->
+            <div class="row">
+                <div class="col s12 m4 center-align">
+                    <h6>National Cuisine Afilliation:{{ recipe.cuisine_name }}</h6>
+                    <br>
+                    <h6>Number of Adults Meal Could Persons: {{ recipe.adult_plates }}</h6>
+                    <br>
+                    <h6>Prep time: {{ recipe.prep_duration }}</h6>
+                    <br>
+                    <h6>Category: {{ recipe.category_name }}</h6>
+                    <br>
+                    <h6><em>Posted by: {{recipe.author}}</em></h6>
+    
+                </div>
+                <div class="col s12 m8" id="web-img">
+                    <img class="img_recipe" src="{{ recipe.img_url }}" alt="Image">
+                </div>
+            </div>
+    
+             <br>
+             <br>
+    
         <!-- Ingredients and instructions -->
         <div class="row">
-            <div class="col s4 custom-col">
+            <div class="col s12 m4">
                 <h4>Ingredients</h4>
                 <ul>
                     {% for list in recipe.ingredients.splitlines() %}
@@ -39,11 +48,11 @@
                     {% endfor %}
                 </ul>
             </div>
-
-
-
-        
-            <div class="col s8 custom-col">
+    
+    
+    
+    
+            <div class="col s12 m8">
                 <h4>Directions</h4>
                 <ul>
                     {% for list in recipe.cook_direction.splitlines() %}
@@ -54,8 +63,8 @@
                 </ul>
             </div>
         </div>
-
-
+    
+    
         <!-- Description of Meal-->
         {% if recipe.simple_description %}
         <div class="row">
@@ -66,23 +75,27 @@
         </div>
         {% else %}
         {% endif %}
-
     
-
-    <div class="col s3">
-           
-                    <i class="fas fa-caret-down"></i>
-                     {% if session.user|lower == recipe.author|lower %}
-                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn red darken-2">Delete</a>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn light-blue lighten-1">
-                            Edit
-
-                        </a>
-                    {% endif %}
+        <br>
+        <br>
+    
+    
+    
+    
+        <div class="col s3">
+    
+    
+            {% if session.user|lower == recipe.author|lower %}
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn red darken-2">Delete</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn light-blue lighten-1">
+                Edit
+    
+            </a>
+            {% endif %}
         </div>
-</div>
-<br>
-<br>
+    </div>
+    <br>
+    <br>
 
  {% endblock %}    
 

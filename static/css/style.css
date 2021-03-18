@@ -90,7 +90,9 @@ footer > .footer-copyright {
     display:block;
     position:relative;
     z-index:10;
-    margin:-15px 0
+    margin:-15px 0;
+    width: 100%;
+    height: 100%;
 }
 .demo-3 figure figcaption {
     display:block;
@@ -154,11 +156,10 @@ footer > .footer-copyright {
   box-sizing: content-box;
   border: none;
   font: normal 56px/1 "Berkshire Swash", Helvetica, sans-serif;    
- color: rgb(52, 214, 160);
+ color: #ba68c8;
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  background-color: #263238;
 }
 
 
@@ -218,7 +219,7 @@ h4.search-button {
 }
 
 .headerz {
-    color: rgb(52, 214, 160);
+    color: #ba68c8;
     font-family: 'Berkshire Swash', cursive;
     font-weight: 500;
 }
@@ -241,6 +242,48 @@ h4.search-button {
     font-size: 20px;
     border: 5px;
     color: #fff;
-    background-color: #455a64;
+    
 
+}
+
+#web-img {
+   max-width: 90%;
+    overflow: hidden;
+    max-height: 70%;
+    display: inline-flex;
+
+}
+
+
+
+
+/*------------------------------------- MEDIA QUERIES | for iPhone 6/7/8 plus   */
+
+@media screen and (max-width: 500px) {
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+    #image-header {
+        background-size: cover;
+        background-position: right center;
+        min-height: 200px;
+        width: 100%;
+        padding: 15px;
+    }
+    #home-quote {
+        font-size: 25px;
+        padding-left: 45%;
+        padding-top: 40%;
+    }   
+
+    #home-text {
+        padding-left: 45%;
+        margin-top: 0;
+    }
+    .recipes-title {
+        font-size: 15px;
+    }
 }

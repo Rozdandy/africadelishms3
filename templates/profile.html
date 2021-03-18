@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+<br>
         <div class="row">
             <div class="col s12 m8 offset-m2">
-                <div class="card-panel">
+                <div class="card-panel grey lighten-3">
                     <h3 class="center-align light-blue-text text-darken-4">
                         {{ username }}'s Profile
                     </h3>
@@ -58,18 +59,14 @@
                             </div>
         
         
-        
-        
-        
-        
                             <!-- Collapse body with all info of the recipe -->
         
                             <div class="collapsible-body grey lighten-3">
                                 <h6><a class="black-cta right btn-small add-btn "
                                         href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">Go to recipe <i
                                             class="fab fa-goodreads right"></i></a></h6>
-                                <h6>category: {{ recipe.category_name }}</h6>
-                                <h6>Serves: {{ recipe.serves }}</h6>
+                                <h6>Ctegory: {{ recipe.category_name }}</h6>
+                                <h6>Serves: {{ recipe.adult_plates}}</h6>
         
         
                                 <div>
@@ -103,9 +100,8 @@
                                 </div>
         
         
-                                <h6>Prep Time: {{ recipe.prep_time }}</h6>
-                                <h6>Ingredients: {{ recipe.ingredients }}</h6>
-                                <h6>Instructions: {{ recipe.instructions}}</h6>
+                                <h6>Cooking Time: {{ recipe.cook_duration }}</h6>
+                                <h6>Created By: {{ recipe.vegan}}</h6>
                                 <h6>Created By: {{ recipe.author}}</h6>
                             </div>
                         </li>
