@@ -1,285 +1,223 @@
 {% extends "base.html" %}
 {% block content %}
 
- <br>
-    <!------------------------- Title -->
-
-    <div class="row">
-        <h3 class="headerz center-align">Edit Recipe</h3>
-    </div>
-
-
-   
-
-
-   <div class="container">
-
-
-    
-
         <br>
+    <!---------------------------- Title -->
 
-    <div class="row card z-depth-2 grey lighten-5">
-        <br>
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-       
-     <!-- Category name -->
-          <div class="row">
-                <div class="input-field col s12">
-                     <i class="fas fa-folder-open prefix purple-text"></i>
-                    <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled>Choose category</option>
-                        {% for category in categories %}
-                            {% if category.category_name == recipe.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                             {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                             {% endif %}
-                        {% endfor %}
-                    </select>
-                    <label for="category_name">Recipe category</label>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <!------------------- Recipe name  -->
-
-            <div class="row">
-                <div class="input-field col s12">
-                     <i class="fas fa-pencil-alt prefix purple-text"></i>
-                    <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text" type="text" minlength="2" maxlength="100" class="validate" required>
-                    <label for="recipe_name">Recipe name</label>
-                </div>
-            </div>
-           
-
-
-             
-
-
-
-    <!------------------Light Description  -->
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left purple-text prefix" aria-hidden="true"></i>
-                    <textarea id="simple_description" name="simple_description" class="materialize-textarea" autocomplete="off" minlength="10" maxlength="300" data-length="300"  placeholder="Shot Description of food delicacy" required>
-                        {{- recipe.simple_description -}}</textarea>
-                    <label for="simple_description">Meal Description</label>
-                </div>
-            </div>
-
-
-
-
-
-
-
- 
-             <!-----------Country related Cuisine --->
-    
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix purple-text"></i>
-                    <select id="cuisine_name" name="cuisine_name" class="validate" required>
-                        <option value="" disabled>Choose Cuisine</option>
-                        {% for cuisine in cuisines %}
-                            {% if cuisine.cuisine_name == recipe.cuisine_name %}
-                                <option value="{{ cuisine.cuisine_name }}" selected>{{ cuisine.cuisine_name }}</option>
-                            {% else %}
-                                <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                    <label for="cuisine_name">Country Related Cuisine</label>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-           
-
-    <!--------------------Upload img URL--->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-image purple-text prefix" aria-hidden="true"></i>
-                    <input id="img_url" name="img_url" value="{{ recipe.img_url }}" type="url" pattern="https?://.+"  class="validate" required>
-                    <label for="img_url">Image url</label>
-                    <span class="helper-text" data-error="enter valid URL" data-success="right"></span>
-                </div>
-            </div>
-
-
-
-
-
-     <!---------------Number it qty can Serve --->
-            <div class="row">
-                <div class="input-field col s12">
-                     <i class="fas fa-utensils purple-text prefix" aria-hidden="true"></i>
-                    <input id="adult_plates" name="adult_plates" type="text" value="{{ recipe.adult_plates }}" pattern="^[1-9][0-9]*$" class="validate" required>
-                    <label for="adult_plates">How many adult will it serve?</label>
-                     <span class="helper-text" data-error="enter valid number" data-success="right">For example: 2</span>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-       <!------------------Preparation time --->
-
-            <div class="row">
-                <div class="input-field col s12">
-                   <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
-                    <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$" value="{{ recipe.prep_duration }}" class="validate" required>
-                    <label for="prep_duration">Preping time (in minutes)</label>
-                    <span class="helper-text" data-error="valid number" data-success="right">For example: 20</span>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <!----------------------Cooking time --->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
-                    <input id="cook_duration" name="cook_duration" type="text" value="{{ recipe.cook_duration }}" pattern="^[1-9][0-9]*$" class="validate" required>
-                    <label for="cook_duration">How long will the actual cooking last?(in minutes)</label>
-                    <span class="helper-text" data-error="valid number" data-success="right">For examle: 20</span>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
- <!-----------------------Ingredients--->
-            <div class="row">
-                <div class="input-field col s11">
-                     <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required>
-                        {{- recipe.ingredients -}}</textarea>
-                    <label for="ingredients">Ingredients</label>
-                    <span class="helper-text" data-error="enter items line by line" data-success="right">Write every new ingredient on a new line.</span>
-                </div>
-            </div>
-            
-            
-          
-
-    <!---------------Cooking directions--->
-
-       
-            <div class="row">
-                <div class="input-field col s12">
-                     <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
-                    <textarea id="cook_direction" name="cook_direction" class="materialize-textarea validate" required>
-                        {{- recipe.instructions -}}
-                    </textarea>
-                    <label for="cook_direction">Directions</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Write every new point on a new line by using the Enter Key..</span>
-                </div>
-            </div>
-
-        
-
-         
-    
-            <!---------------------Vegan toggle--->
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-toggle-off purple-text prefix" aria-hidden="true"></i>
-						<label for="vegan">
-                               Vegan
-                               {% if recipe.vegan == "on" %}
-                            <input type="checkbox" id="vegan" name="vegan" checked>
-                               {% else %}
-                                <input type="checkbox" id="vegan" name="vegan">
-                                {% endif %}
-                            <span class="lever"></span>
-                       
-                        
-                       </label>
-                           </div>
-                   </div>
-    
-                 </div>
-            
-
-
-
-
-
- 
-
-
-
-    <!---------------------Date Posted--->
-           <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix purple-text" aria-hidden="true"></i>
-                    <input id="date_posted" name="date_posted" value="{{ recipe.date_posted }}" type="text" class="datepicker validate" required>
-                    <label for="date_posted">Date Posted</label>
-                </div>
-            </div>
-
-
-
-
-<!---------------------Submit button--->
-    <div class="row">
-        <div class="col s12">
-           
-            <a class = "btn-large add-btn red darken-2 center-align" href="{{ url_for('get_recipes') }}">
-                Cancel <i class="fas fa-window-close right"></i>
-            </a>
-             <button type="submit" class="btn-large add-btn light-blue lighten-1">Edit recipe <i class="fas fa-edit right"></i></button>
+        <div class="row">
+            <h3 class="headerz center-align">Edit Recipe</h3>
         </div>
+
+
+        <div class="container">
+
+            <br>
+
+            <div class="row card z-depth-2 grey lighten-5">
+                <br>
+                <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+
+
+    <!--------------------------Category name -->
         
-    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-folder-open prefix purple-text"></i>
+                            <select id="category_name" name="category_name" class="validate" required>
+                                <option value="" disabled>Choose category</option>
+                                {% for category in categories %}
+                                {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                                {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                            <label for="category_name">Recipe category</label>
+                        </div>
+                    </div>
+
+    <!------------------------ Recipe name  -->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-pencil-alt prefix purple-text"></i>
+                            <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text"
+                                minlength="2" maxlength="100" class="validate" required>
+                            <label for="recipe_name">Recipe name</label>
+                        </div>
+                    </div>
 
 
-  <br>
+  <!---------------------Light Description  -->
 
-    </form>
-  </div>
-  </div>
-  <br>
- <br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-align-left purple-text prefix" aria-hidden="true"></i>
+                            <textarea id="simple_description" name="simple_description" class="materialize-textarea"
+                                autocomplete="off" minlength="10" maxlength="300" data-length="300"
+                                placeholder="Shot Description of food delicacy" required>
+                                {{- recipe.simple_description -}}</textarea>
+                            <label for="simple_description">Meal Description</label>
+                        </div>
+                    </div>
+
+
+    <!------------------Country related Cuisine --->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-folder-open prefix purple-text"></i>
+                            <select id="cuisine_name" name="cuisine_name" class="validate" required>
+                                <option value="" disabled>Choose Cuisine</option>
+                                {% for cuisine in cuisines %}
+                                {% if cuisine.cuisine_name == recipe.cuisine_name %}
+                                <option value="{{ cuisine.cuisine_name }}" selected>{{ cuisine.cuisine_name }}</option>
+                                {% else %}
+                                <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                            <label for="cuisine_name">Country Related Cuisine</label>
+                        </div>
+                    </div>
+
+
+    <!------------------------Upload img URL--->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-image purple-text prefix" aria-hidden="true"></i>
+                            <input id="img_url" name="img_url" value="{{ recipe.img_url }}" type="url" pattern="https?://.+"
+                                class="validate" required>
+                            <label for="img_url">Image url</label>
+                            <span class="helper-text" data-error="enter valid URL" data-success="right"></span>
+                        </div>
+                    </div>
+
+
+   <!------------------Number it qty can Serve --->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-utensils purple-text prefix" aria-hidden="true"></i>
+                            <input id="adult_plates" name="adult_plates" type="text" value="{{ recipe.adult_plates }}"
+                                pattern="^[1-9][0-9]*$" class="validate" required>
+                            <label for="adult_plates">How many adult will it serve?</label>
+                            <span class="helper-text" data-error="enter valid number" data-success="right">For example: 2</span>
+                        </div>
+                    </div>
+
+    <!--------------------------Preparation time --->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
+                            <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$"
+                                value="{{ recipe.prep_duration }}" class="validate" required>
+                            <label for="prep_duration">Preping time (in minutes)</label>
+                            <span class="helper-text" data-error="valid number" data-success="right">For example: 20</span>
+                        </div>
+                    </div>
+
+
+    <!-----------------------------Cooking time --->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
+                            <input id="cook_duration" name="cook_duration" type="text" value="{{ recipe.cook_duration }}"
+                                pattern="^[1-9][0-9]*$" class="validate" required>
+                            <label for="cook_duration">How long will the actual cooking last?(in minutes)</label>
+                            <span class="helper-text" data-error="valid number" data-success="right">For examle: 20</span>
+                        </div>
+                    </div>
+
+
+
+  <!------------------------------Ingredients--->
+
+                    <div class="row">
+                        <div class="input-field col s11">
+                            <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
+                            <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required>
+                                {{- recipe.ingredients -}}</textarea>
+                            <label for="ingredients">Ingredients</label>
+                            <span class="helper-text" data-error="enter items line by line" data-success="right">Write every new
+                                ingredient on a new line.</span>
+                        </div>
+                    </div>
+
+
+  <!-----------------------Cooking directions--->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
+                            <textarea id="cook_direction" name="cook_direction" class="materialize-textarea validate" required>
+                                {{- recipe.instructions -}}
+                            </textarea>
+                            <label for="cook_direction">Directions</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">Write every new point on a new
+                                line by using the Enter Key..</span>
+                        </div>
+                    </div>
+
+
+<!----------------------------Vegan toggle--->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <div class="switch">
+                                <i class="fas fa-toggle-off purple-text prefix" aria-hidden="true"></i>
+                                <label for="vegan">
+                                    Vegan
+                                    {% if recipe.vegan == "on" %}
+                                    <input type="checkbox" id="vegan" name="vegan" checked>
+                                    {% else %}
+                                    <input type="checkbox" id="vegan" name="vegan">
+                                    {% endif %}
+                                    <span class="lever"></span>
+
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+     <!----------------------------Date Posted--->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-calendar-alt prefix purple-text" aria-hidden="true"></i>
+                            <input id="date_posted" name="date_posted" value="{{ recipe.date_posted }}" type="text"
+                                class="datepicker validate" required>
+                            <label for="date_posted">Date Posted</label>
+                        </div>
+                    </div>
+
+ <!---------------------------Submit button--->
+
+                    <div class="row">
+                        <div class="col s12">
+
+                            <a class="btn-large add-btn red darken-2 center-align" href="{{ url_for('get_recipes') }}">
+                                Cancel <i class="fas fa-window-close right"></i>
+                            </a>
+                            <button type="submit" class="btn-large add-btn light-blue lighten-1">Edit recipe <i
+                                    class="fas fa-edit right"></i></button>
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
 
 {% endblock %}

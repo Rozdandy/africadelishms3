@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align deep-purple-text lighten-2">Register</h3>
+    <h3 class="center-align headerz">Register</h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
@@ -9,7 +9,7 @@
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+						<i class="fas fa-user-plus prefix blue-grey-text text-darken-2"></i>
 						<input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 						<label for="username">Username</label>
@@ -17,11 +17,11 @@
                 </div>
 
 
-                <!-- passowrd --------------------------->
+                <!--  -----------------------passowrd---->
 
                 <div class="row">
                     <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
+						<i class="fas fa-user-lock prefix blue-grey-text text-darken-2"></i>
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
@@ -29,11 +29,11 @@
                 </div>
 
 
-                <!-- register ----------------------------------->
+                <!--------------------------------- register --->
 
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
+                    <button type="submit" class="col s12 btn-large reg-btn-color text-shadow">
+                        Register <i class="fas fa-sign-in-alt prefix"></i>
                     </button>
                 </div>
             </div>
