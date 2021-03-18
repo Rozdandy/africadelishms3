@@ -10,6 +10,7 @@ $(document).ready(function () {
     $('.parallax').parallax();
     $("#copyright").text(new Date().getFullYear());
     $(".dropdown-trigger").dropdown();
+     $('.modal').modal();
     $("select").formSelect();
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",

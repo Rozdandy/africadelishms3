@@ -1,195 +1,210 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Title -->
+    <br>
+
     <div class="row">
-        <h3 class="center-align">Add Recipe</h3>
-        <hr class="blackline">
+        <h3 class="headerz center-align">Add Recipe</h3>
     </div>
+    
+    <div class="container">
+        
+    <!-- Title -->
+     
+    <br>
 
-
-
-        <div class="row card-panel grey lighten-5">
+    <div class="row card z-depth-2 grey lighten-5">
+        <br>
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
-       
-     <!-- Category name -->
-          <div class="row">
+    
+            <!-- Category name -->
+            <div class="row">
                 <div class="input-field col s12">
-                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-folder-open prefix purple-text"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose category</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name}}">{{ category.category_name }}</option>
+                        <option value="{{ category.category_name}}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
                     <label for="category_name">Recipe category</label>
                 </div>
             </div>
-
-    <!-- Add recipes -->
+    
+    
     
             <!-- Recipe name -->
             <div class="row">
                 <div class="input-field col s12">
-                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$" minlength="5" maxlength="50" class="validate" required>
+                    <i class="fas fa-pencil-alt prefix purple-text"></i>
+                    <input id="recipe_name" name="recipe_name" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,25}$"
+                        minlength="2" maxlength="100" class="validate" required>
                     <label for="recipe_name">Recipe name</label>
                 </div>
             </div>
-           
-
-
-            
- 
-              <!-- Country related food name -->
-
-
-                <div class="row">
+    
+    
+    
+            <!-- Description  -->
+            <div class="row">
                 <div class="input-field col s12">
-                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-align-left purple-text prefix" aria-hidden="true"></i>
+                    <textarea id="simple_description" name="simple_description" class="materialize-textarea"
+                        autocomplete="off" minlength="10" maxlength="100" data-length="300"
+                        placeholder="Description of The Recipe" required></textarea>
+                    <label for="simple_description">Meal Description</label>
+                </div>
+            </div>
+    
+    
+            <!-- Country related food name -->
+    
+    
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix purple-text"></i>
                     <select id="cuisine_name" name="cuisine_name" class="validate" required>
                         <option value="" disabled selected>Choose cuisine</option>
                         {% for cuisine in cuisines %}
-                            <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                        <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
                         {% endfor %}
                     </select>
                     <label for="cuisine_name">cuisine recipe</label>
                 </div>
             </div>
-
-
-
-        
-              
-
+    
+    
+    
+    
+    
+    
             <!-- Upload img URL -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-image purple-text material-icons prefix" aria-hidden="true"></i>
-                    <input id="img_url" name="img_url" type="url" pattern="https?://.+"  class="validate" required>
+                    <i class="fas fa-image purple-text prefix" aria-hidden="true"></i>
+                    <input id="img_url" name="img_url" type="url" pattern="https?://.+" class="validate" required>
                     <label for="img_url">Image url</label>
                     <span class="helper-text" data-error="enter valid URL" data-success="right"></span>
                 </div>
             </div>
-
-
+    
+    
             <!-- Serves -->
             <div class="row">
-                <div class="input-field col s11">
-                    <input id="adult_plates" name="adult_plates" type="text"  pattern="^[1-9][0-9]*$" class="validate" required>
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils purple-text prefix" aria-hidden="true"></i>
+                    <input id="adult_plates" name="adult_plates" type="text" pattern="^[1-9][0-9]*$" class="validate"
+                        required>
                     <label for="adult_plates">How many adult will it serve?</label>
                     <span class="helper-text" data-error="enter valid number" data-success="right">For example: 2</span>
                 </div>
             </div>
-
-
+    
+    
             <!-- Preparation time  -->
-
+    
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-hourglass-half purple-text material-icons prefix" aria-hidden="true"></i>
-                    <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$" class="validate" required>
+                    <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
+                    <input id="prep_duration" name="prep_duration" type="text" pattern="^[1-9][0-9]*$" class="validate"
+                        required>
                     <label for="prep_duration">Preping time (in minutes)</label>
                     <span class="helper-text" data-error="enter valid number" data-success="right">For example: 30</span>
                 </div>
             </div>
-
-
-              <!-- Cooking time  -->
+    
+    
+            <!-- Cooking time  -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-hourglass-half purple-text material-icons prefix" aria-hidden="true"></i>
-                    <input id="cook_duration" name="cook_duration" type="text" pattern="^[1-9][0-9]*$" placeholder="X hours X minutes" class="validate" required>
+                    <i class="fas fa-hourglass-half purple-text prefix" aria-hidden="true"></i>
+                    <input id="cook_duration" name="cook_duration" type="text" pattern="^[1-9][0-9]*$"
+                        placeholder="X hours X minutes" class="validate" required>
                     <label for="cook_duration">How long will the actual cooking last?(in minutes)</label>
                     <span class="helper-text" data-error="enter valid number" data-success="right">For examle: 30</span>
                 </div>
             </div>
-
-
+    
+    
             <!-- Ingredients  -->
             <div class="row">
-                <div class="input-field col s11">
+                <div class="input-field col s12">
+                    <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
                     <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
                     <label for="ingredients">Ingredients</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Write every new ingredient on a new line.</span>
+                    <span class="helper-text" data-error="wrong" data-success="right">Write every new ingredient on a new
+                        line.</span>
                 </div>
             </div>
-            
-            
-            <!-- Description  -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left purple-text material-icons prefix" aria-hidden="true"></i>
-                    <textarea id="simple_description" name="simple_description" class="materialize-textarea" autocomplete="off" minlength="20" maxlength="100" data-length="300" placeholder="Description of The Recipe" required></textarea>
-                    <label for="simple_description">Meal Description</label>
-                </div>
-            </div>
-
-
-          <!-- Cooking directions  -->
-           
-            
-            <div class="row card z-depth-2 recipe-card new-recipe">
-            
-                <h4 class="font-special bold upper text-shadow-2 center-align">Directions</h4>
-            <!-- Instructions  -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="cook_direction" name="cook_direction" class="materialize-textarea validate" required>
-                    </textarea>
-                    <label for="cook_direction">Directions</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Write every new point on a new line by using the Enter Key..</span>
-                </div>
-            </div>
-
-        </div>
+    
     
             
-        
-
-
-            <!-- Vegan toggle -->
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        
-						<label for="vegan">
-                               Vegan
-                            <input type="checkbox" id="vegan" name="vegan">
-                            <span class="lever"></span>
-                           <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-                        </label>
+    
+    
+            <!-- Cooking directions  -->
+    
+    
+           
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-list-alt purple-text prefix" aria-hidden="true"></i>
+                        <textarea id="cook_direction" name="cook_direction" class="materialize-textarea validate" required>
+                        </textarea>
+                        <label for="cook_direction">Directions</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Write every new point on a new
+                            line by using the Enter Key..</span>
                     </div>
-				</div>
-            </div>
-            
+                </div>
+    
 
-             <!-- Date Posted  -->
+    
+    
+            <!-- Vegan toggle -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                    <div class="switch">
+                         <i class="fas fa-toggle-off purple-text prefix" aria-hidden="true"></i>
+                        <label for="vegan">
+                            Vegan
+                            <input type="checkbox" id="vegan" name="vegan">
+                            <span class="lever"></span>
+                            
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- Date Posted  -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix purple-text" aria-hidden="true"></i>
                     <input id="date_posted" name="date_posted" type="text" class="datepicker validate" required>
                     <label for="date_posted">Date Posted</label>
                 </div>
             </div>
-
-
+    
+    
             <!-- Submit button- ----->
-    <div class="row">
-        <div class="col s11">
-           
-            <a class = "col s3 btn-small custom-btn center-align" href="{{ url_for('get_recipes')  }}">
-                cancel
-            </a>
-             <button type="submit" class="col s4 btn-small custom-btn">Add recipe <i class="fas fa-plus-square right"></i></button>
-        </div>
-        
+            <div class="row">
+                <div class="col s12 center-align">
+    
+                    <a class=" btn-large add-btn center-align" href="{{ url_for('get_recipes')  }}">
+                        cancel
+                    </a>
+                    <button type="submit" class="btn-large add-btn">Add recipe <i
+                            class="fas fa-plus-square right"></i></button>
+                </div>
+    
+            </div>
+            <br>
+    
+    
+    
+    
+        </form>
     </div>
-
-
-
-
-    </form>
-  </div>
-
+</div>
+<br>
+<br>
 {% endblock %}

@@ -22,9 +22,11 @@ mongo = PyMongo(app)
 def index():
     recipes = list(mongo.db.recipes.find())
     cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    mobile_recipes = mongo.db.recipes.aggregate([{"$sample": {"size": 4}}])
     # Shows the first three recipes for mobile
     return render_template(
-        "index.html", recipes=recipes, cuisines=cuisines)
+        "index.html", recipes=recipes, cuisines=cuisines,
+        mobile_recipes=mobile_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -83,6 +85,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     # Only users can access their profile
     if not session.get("user"):
         return render_template("error_handle/404.html")
@@ -94,14 +97,14 @@ def profile(username):
     if session["user"]:
         # Admin has acces to all recipes
         if session["user"] == "admin":
-            user_recipe = list(mongo.db.recipes.find())
+            uza = list(mongo.db.recipes.find())
         else:
             # user sees own recipes
-            user_recipe = list(
+            uza = list(
                 mongo.db.recipes.find({"author": session["user"]}))
 
         return render_template(
-            "profile.html", username=username, user_recipe=user_recipe)
+            "profile.html", username=username, uza=uza, cuisines=cuisines)
 
     return redirect(url_for("login"))
 
@@ -118,12 +121,14 @@ def logout():
 def get_recipes():
     # sort the names of the breads list #
     recipes = list(mongo.db.recipes.find())
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     return render_template(
-        "get_recipes.html", recipes=recipes)
+        "get_recipes.html", recipes=recipes, cuisines=cuisines)
 
 
 @app.route("/get_recipez/<category>")
 def get_recipez(category):
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     # Show recipes of that specific category
     if category == "all":
         recipes = list(mongo.db.recipes.find())
@@ -145,7 +150,7 @@ def get_recipez(category):
         recipes = mongo.db.recipe.find({"$text": {"$search": category}})
     return render_template(
         "get_recipez.html",
-        recipes=recipes, category=category)
+        recipes=recipes, category=category, cuisines=cuisines)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -222,7 +227,7 @@ def edit_recipe(recipe_id):
             "vegan": vegan,
             "prep_duration": request.form.get("prep_duration"),
             "cook_duration": request.form.get("cook_duration"),
-            "cuisine_name": request.form.get("cusine_name"),
+            "cuisine_name": request.form.get("cuisine_name"),
             "date_posted": request.form.get("date_posted"),
             "ingredients": request.form.get("ingredients"),
             "adult_plates": request.form.get("adult_plates"),
@@ -234,9 +239,11 @@ def edit_recipe(recipe_id):
         return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories)
+        "edit_recipe.html",
+        recipe=recipe, categories=categories, cuisines=cuisines)
 
 
 @app.route("/delete_recipe/<recipe_id>")
