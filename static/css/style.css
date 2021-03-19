@@ -2,6 +2,18 @@
 
 
 
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+
+
 
 
 .text-shadow {
@@ -16,18 +28,12 @@
 
 #main-logo {                                    
 
-        /* font-family: 'Merriweather', serif; */
+      
         font-size: 300%;
-        /* margin-left: 0px; */
-        /* margin-bottom: 0; */
-        /* padding-bottom: 2px; */
-        /* padding-left: 50px; */
-        /* border-bottom: 0; */
-        /* text-transform: uppercase; */
+       
+        
         letter-spacing: 2px;
         text-decoration: none;
-        /* line-height: 75px;
-        height: 75px; */
         
 
 }
@@ -73,7 +79,7 @@ footer > .footer-copyright {
 
 .demo-3 {
     position:relative;
-    width:300px;
+    width:90%;
     
     overflow:hidden;
     float:left;
@@ -90,9 +96,8 @@ footer > .footer-copyright {
     display:block;
     position:relative;
     z-index:10;
-    margin:-15px 0;
-    width: 100%;
-    height: 100%;
+    margin: auto;
+    height: 250px;
 }
 .demo-3 figure figcaption {
     display:block;
@@ -233,9 +238,19 @@ h4.search-button {
     border-radius: 15px;
     margin-right: 30px;
     color: #fff;
+    margin-bottom: 10px;
     
 }
 
+
+/* .add-btn {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    border: 5px;
+    border-radius: 15px;
+    margin-right: 30px;
+    color: #fff;
+} */
 
 .reg-btn-color{
     font-family: 'Exo 2', sans-serif;
@@ -253,37 +268,7 @@ h4.search-button {
     display: inline-flex;
 
 }
-
-
-
-
-/*------------------------------------- MEDIA QUERIES | for iPhone 6/7/8 plus   */
-
-@media screen and (max-width: 500px) {
-    h4 {
-        font-size: 20px;
-    }
-    h5 {
-        font-size: 20px;
-    }
-    #image-header {
-        background-size: cover;
-        background-position: right center;
-        min-height: 200px;
-        width: 100%;
-        padding: 15px;
-    }
-    #home-quote {
-        font-size: 25px;
-        padding-left: 45%;
-        padding-top: 40%;
-    }   
-
-    #home-text {
-        padding-left: 45%;
-        margin-top: 0;
-    }
-    .recipes-title {
-        font-size: 15px;
-    }
+img.responsive-img{
+    margin-right:30px;
 }
+

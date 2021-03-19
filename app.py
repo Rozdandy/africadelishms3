@@ -260,7 +260,7 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
-     # Only admin can access categories
+    #  Only admin can access categories
     if not session.get("user") == "admin":
         return render_template("error_handle/404.html")
 
@@ -286,6 +286,22 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
+
+
+# ---------------------------------------------------------- ERROR HANDLERS #
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("error_handlers/404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("error_handlers/500.html"), 500
+
+
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template("error_handlers/403.html"), 403
 
 
 if __name__ == "__main__":
