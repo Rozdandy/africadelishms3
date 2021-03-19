@@ -226,7 +226,7 @@ def delete_recipe(recipe_id):
     # Delete recipe from db
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
-    return redirect(url_for("get_recipez"))
+    return redirect(url_for("get_recipez", category='all'))
 
 
 @app.route("/get_categories")

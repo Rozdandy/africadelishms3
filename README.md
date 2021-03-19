@@ -33,7 +33,6 @@ As a user, I would like to:
 
  *  view the site in any type of devices (mobile, tablet, desktop).
  *  view all recipes as a visitor.
- *  limit the number of recipes to display, or see all recipes.
  *  register to be a member and a regular user.
  *  be able to log in after registering
  *  view my own profile.
@@ -53,9 +52,9 @@ As a user, I would like to:
 
 In addition to the aforementioned user objectives above, as an Admin, i would like:
 
- *  be able add new categories.
- *  edit categories, in order to update categories.
- *  delete categories, in order to regulate and coordinates all rescipes.
+ *  be able add new categories and recipes.
+ *  edit categories and recipes, in order to update them.
+ *  delete categories, and recipes, in order to regulate and coordinates them.
 
 ### Developer objectives
 
@@ -84,10 +83,11 @@ The concept behind this site is just to enable individual culture and nations ac
 
 The developer used [eggradients](https://www.eggradients.com/shades-of-green-color) to choose colors when building the website. Particularly, the follwoing colors were used which are bright to make the site more appealling to sight:
 
- * #F06292 #F06292 (pink lighten-2 - secondary color)
- * #9C27B0 #9C27B0 (purple - primary color)
- * #2196F3 #2196F3 (blue - tertiary color)
- * #4CAF50 #4CAF50 (green - quaternary color)
+ * #d32f2f (red color)
+ * #455a64  (blue-grey color)
+ * #263238  (blue-grey color )
+ * #ba68c8 (purple color)
+ * #69f0ae (green color)
 
 
  ## **Wireframe**
@@ -106,10 +106,6 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 
 # **FEATURES**
-
-## Header, Main body divided into sections and Footer, and same as the Game section
-
-  **A responsive mobile first design using a [materialize framework](https://materializecss.com/getting-started.html).**
 
 
   **Existing Features**
@@ -134,6 +130,10 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 ### ** Search Recipes
 
 * A user may want to search for a certain recipe by their name or by their description.
+
+### ** Submit recipe
+
+### ** Edit or Update Recipe
 
 
 
@@ -211,6 +211,341 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 * **freeformatter**:  [freeformatter](https://www.freeformatter.com/html-formatter.html) The site was used to format HTML.
 * **Lighthouse**:     [Balsamiq](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) To audit the site perfomance and accessibility.
 * **Am I Responsive?**:[Am I Responsive?](http://ami.responsivedesign.is/) It was used to test the responsiveness of the site and to take screenshot of devices.
+
+
+
+
+pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+
+
+## **Testing user stories from UX section**
+
+#### First-time visitors goals:
+
+1. As a visitor, I want to be able to view the site in all modern devices, such as the desktop, tablet and mobile etc.
+      * The visitor can visite the website on computer, laptop, tablet and phone.
+
+
+2  Able to see all recipes as a visitor
+    * The vistors can navigate through the site form the homepage with the navbar. 
+    * The navbar is at the top of the site. They niew the whole recipes by click on the "View all categories" link in the navbar
+    * There is a hamburger menu for the mobile view to aid navigations.
+    * From the "View all categories" link , they can click on categories such breakfast menu, lunch etc.
+
+
+3  Register to be a member and a regular user
+    
+    * The visitor can navigate to the register page by clicking on the "register" link on the navbar. 
+    * There on the page, intended user can register.
+
+4  To be able to log in after registeration
+
+    * A user who has registered can easily log in from the navbar at the top of the site from any page by clicking on the "log in" link.
+    * The page will open, Therefore, user can log in fully.
+
+
+5. Able to search for recipes by names or description
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * There on the page the user can easily use the search engine to check for any particular recipe.
+
+
+
+6. Able to search for recipes by names or description
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * There on the page the user can easily use the search engine to check for any particular recipe either by name or description.
+
+
+7. Able to search for recipes categories
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * From the drop-downs, they can click on any category and the related recipes will be opened.
+
+
+
+8. Able to know the particular African country which the recipe belongs to.
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking on a particular recipe.
+    * The information about the recipe is revealed which include the nationality of such cuisine
+
+
+
+
+
+
+#### User/member goals:
+
+9. View my own profile
+
+    * Once a user, and has login, he/she is automatically taken to their profile page.
+    * There, they can see all their recipes that they have posted and may want to post more by click on a CTA button.
+
+10. Add my recipes
+
+    * As as a user, he/she can post recipes, the option to post recipes is only available to users on the navbar.
+    * A user can click on the link on the navbar and the page will open.
+  
+
+11.  To see instructions on how to add a recipe
+
+    * Once the user click on the link "Add Recipe" from the navbar, the form will opened.
+    * The input form is easy and direct to fill, and they can submit after filling in all the requirements by hitting the   green "ADD RECIPE" button.
+
+
+12. To able to edit or update their recipes
+
+    * This can be achieved when a user click on their posted recipes.
+    * There is an option to edit at the bottom of the page for the said recipe.
+    * When they click on the edit button, it takes them to form which is already pre-selected for the said recipe.
+    * They choose to edit in or oder to update or just cancel to leave the recipe
+
+
+13.  To be able to delete my recipes that are not needed again
+
+    * This can be achieved when a user click on their posted recipes.
+    * There is an option to delete sitting next to the edit button at the bottom of the page for the said recipe.
+    * When they click on the delete button, it wipes off immediately.
+
+
+14. To be able to log out
+
+    * This can be achieved when a registered user click on log out button on the navbar.
+    * THis button is only available to users that logged in.
+
+
+
+14. To be able recieve feedback if they scuccessfully performed any of the CRUD operations
+
+    * User recieve feedback in form flash messages for certain action carried out such as; registeration, login, logout, poste recipes etc.
+
+
+15. To be able to recieve an error message for perform the activities that is not within the scope of the website or there is an issue with database.
+
+    * User either gets 404/ or 405 message performing functionalities tat is not within the scope of the site.
+
+
+
+
+
+#### *Admin Objectives:*
+
+In addition to the aforementioned above, The Admin can:
+
+ 16. To able be able add new categories and recipes
+    
+    * Just like any other users, the admin is able to perfom all the functionalities above which include, adding categories and recipes.
+    * Only the admin can:
+
+        * Add, edit categories and recipes, for the site.
+        * Delete categories, and recipes, in order to regulate unappropriate submissions.
+
+    * Those operations can be performed, when the recorgnize admin log in
+    * The admin profile has access to all posted recipes by users and categories unlike users' that have access to their individual posted recipes in their profiles
+
+
+
+### Developer objectives
+    By building the website, the following skills were demonstrated by the developer:
+
+ * Able to perform the CRUD operations using python, jinja, MongoDb etc.
+ * good use of Jinja templating, Python, non-relational database MongoDb
+ * good use of materialize library combine with JavaScript knowledge.
+ * how to make the website lives by deploying to Heroku.
+
+
+
+
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+## **Manual Testing**
+
+#### **1. Register Account:**
+
+Most of the features in the site and based on securities measures and are built on Defensive programming.
+
+* The registeration page allow intended users to register for free to create their own account. 
+
+    * In the site and at the top is the navbar, user can click on register link on the navbar and it will navigate them to the page.
+    * The intended user's username has to be between 5-15 which could be characters or numbers or combined.
+    * The password has to be between 5-20 characters and must contain at least one capital letter, lowercases and atleast a number.
+    * Attempt to use username/password that is not compliant with the specified requirements and you will get; (match the requested format) tooltips.
+
+
+
+#### **Login
+
+ This is to enable registered user to access the pages and their profiles
+    
+    * User trying to brut force their ways in with wrong credentials will get: "Incorrect Username and/or Password"
+    * Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
+
+
+
+
+
+#### ** Post recipe
+
+ This to enable users to submit recipe to their sites and thier profiles
+
+    * On the navbar is the "Add Recipe" link, a user click on it takes them to the input form.
+    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncoompleted fields.
+    * After filling all the fields completely, user can click the "Add Recipe" green button to submit.
+    * After flash message will show for scuccessfully submissions.
+
+
+
+
+
+
+#### ** Edit or Update Recipe
+
+ This feature is to enable users to update or editing an existing recipes posted by them 
+
+    * On the website user can click on the recipes posted by them from their profile page.
+    * Also, they click on the recipe created by them on the main page.
+    * The recipe will open on another page to reveal it information.
+    * At the bottom of the page there is blue " edit" button, when they click on it, it will take them to the pre-selected fields.
+    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncompleted fields.
+    * After filling or changing the the desired fields, user can click the blue "Edit" button to submit.
+
+
+#### **Delete recipe
+
+    This operation can only be carried out by users that have posted recipes to their names.
+
+  A 
+    * On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
+    * A click on it will instantly remove the recipe completely.
+    * Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
+
+B   * A user can also delete a recipe from their Profile page.
+    * On the accordion on their profile page, their are the "DELETE and EDIT" buttons.
+    * When a user click on the red delete button, there is a pop-up dialogue modal that will ask, if user is sure they want to delete the said recipes.
+    * User can either choose to delete or cancel
+
+
+#### ** Logout
+
+        This can only be carried out by those were already log in
+        * On the navbar is the logout option for the users.
+        * click on it will log them out and will reidrect to login page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# **DEPLOYMENT**
+
+## Deploying
+
+The website was developed using both GitPod and using Git push to store them in GitHub, GitHub host the repository. The following steps weren used to deploy the site live using GitHub Pages:
+
+* Launched GitHub in a browser.
+* Signed in with my username and password.
+* Then choose “YOUR REPOSITORIES” from the dropdown’s
+* Navigated to "ms2-project" and clicked and the project opened in a new page.
+* In the top navigation clicked settings.
+* Scrolled down to the GitHub Pages area.
+* Master Branch was selected from the Source dropdown menu.
+* Clicked the save button to confirm.
+* " ms2-project" became live on GitHub Pages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# CREDITS
+
+## contents
+
+
+**References:**
+
+
+* Special thanks to Tim Nelson lecture videos, many of the codes on registeration, authorization, authentication many more I assisted me in completing this project.
+
+
+## Media
+
+All of the images in the site were supplied drom the sources below.
+
+* Game background Image:
+    *   https://www.pikrepo.com/flrcm/lasagna-on-top-of-white-ceramic-plate
+    *   https://www.pikrepo.com/ftfhq/assorted-foods-on-table
+    *   https://www.pikrepo.com/nuzcs/local-thai-food-buffet
+    *   https://www.pikrepo.com/frive/roasted-steak-with-sliced-tomato-on-white-plate
+
+* Images: 
+  
+    * https://www.pikrepo.com/fnuon/gray-curved-road-beside-arrow-left-signage-under-white-cloud-blue-skies#google_vignette
+    * https://www.pikrepo.com/fomjf/brown-wooden-fence-near-trees-covered-in-snow
+    * https://www.pikrepo.com/frdlf/red-leaf-tree-digital-wallpaper
+    * Among others are google images
+
+
+
+* This sites were sources of inspiration to me:
+    * https://vegan-gluten.herokuapp.com/
+    * https://ms3-breaktasty.herokuapp.com/
+    * https://ms3-breaktasty.herokuapp.com/
+
+
+**Miscellaneous**
+
+ * The lecture videos and notes
+ * [Stack overflow](https://stackoverflow.com/) To seek solutions to fix bugs.
+ * [W3Schools](https://www.w3schools.com/) I used this site for references in many instances.
+
+## Acknowledgements
+I received inspiration for this project from:
+
+* God for Mercies.
+* Tim Nelson for great tutor videos
+* My mentor for advice and feedback.
+* Student care and student tutors for being there when I needed them most.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
