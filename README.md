@@ -95,6 +95,37 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
         
 
 
+# **FEATURES**
+
+  **Existing Features**
+
+### **1. Register Account:**
+
+* The registeration page allow intended users to register for free to create their own account. For security reason, there is a built-in authorization and    authentication  to check certain criteria to be met before an   account is validated. All passwords are hashed for further securities.
+
+### **2. Log In
+
+* This is for users that registered, more authentication and authorization was embedded to check that the hashed passwords and username if they matched in the database.
+
+### **Log Out
+
+* To enable users to log out of their accounts with a click of the button.
+
+### **View All Recipes
+
+* On the All Recipes link on the Navbar, which will open All recipes page when clicked, it displays all the available recipes on the website.
+
+
+### ** Search Recipes
+
+* A user may want to search for a certain recipe by their name or by their description.
+
+### ** Submit recipe
+
+### ** Edit or Update Recipe
+
+
+
 
 
 
