@@ -1,7 +1,7 @@
     {% extends "base.html" %}
     {% block content %}
 
-    <!--    homepage----------------------slider carousel-->
+    <!--- homepage----------------------slider carousel-->
 
     <div class="container-fluid">
         <div class="slider">
@@ -98,11 +98,13 @@
 
                                 <figcaption>
 
-                                    <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
-                                            <h2>Recipe: <strong>{{ recipe.recipe_name }}</strong></h2>
-                                            <h2>Cusine: <strong>{{ recipe.cuisine }}</strong></h2>
-                                            <h2>By: <em>{{ recipe.author }}</em></h2>
-                                        </a></p>
+                                    <p>
+                                        <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                                            <h2><i class="fas fa-bread-slice white-text text-lighten-2"></i>  <strong>{{ recipe.recipe_name }}</strong></h2>
+                                            <h2><i class="fas fa-user white-text text-lighten-2 foodz"></i>   <strong>{{ recipe.author }}</strong></h2>
+                                            <h2><i class="fas fa-flag white-text text-lighten-2 foodz"></i>   <strong>{{ recipe.cuisine }}</strong></h2>
+                                        </a>
+                                    </p>
 
                                 </figcaption>
                                 

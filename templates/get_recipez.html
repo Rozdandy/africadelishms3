@@ -1,13 +1,13 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-
+                <!--- -----------------------view-all-categories-page--->
 <div id="ourProjectss" class="section scrollspy">
     <div class="container">
         <h6 class="ourProjects">All Recipes</h6>
         <br>
 
-
+                <!--- ----------------------------------search-engine--->
         <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -31,6 +31,7 @@
 
 
         <br>
+        <!-----------------------------------recipe image-card-->
         {% if recipes|length > 0 %}
         <div class="row">
             {% for recipe in recipes %}
@@ -43,14 +44,15 @@
                             <img src="{{ recipe.img_url }}" class="responsive-img" alt="" />
                             <figcaption>
 
-                                <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
-                                        <h2>{{ recipe.recipe_name }}</h2>
-                                    </a></p>
-                                <div class="col-6"><i class="fas fa-clock"></i>{{ recipe.cook_duration }}</div>
-                                <div class="col-6"><i class="fas fa-user"></i>{{ recipe.author }}</div>
-
-
-
+                                <p>
+                                    <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                                        <h2><i class="fas fa-bread-slice white-text text-lighten-2"></i>  <strong>{{ recipe.recipe_name }}</strong></h2>
+                                        <h2><i class="fas fa-user white-text text-lighten-2 foodz"></i>   <strong>{{ recipe.author }}</strong></h2>
+                                        <h2><i class="fas fa-flag white-text text-lighten-2 foodz"></i>   <strong>{{ recipe.cuisine }}</strong></h2>
+                                    </a>
+                                </p>
+                                
+                            
                             </figcaption>
                         </figure>
                     </li>

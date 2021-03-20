@@ -2,6 +2,7 @@
 {% block content %}
 
 <br>
+    <!-- --------------------User profile-->
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel grey lighten-3">
@@ -13,36 +14,40 @@
         </div>
         
         
-        <!-- Recipes of user -->
+        <!-- -------------------header and CTA-to new-recipe -->
         <div class="row">
             <div class="col s5 m4 offset-m2">
                 <h4><strong>MY RECIPES</strong></h4>
             </div>
             <div class="col s7 m4 right">
-                <h5><a href="{{ url_for('add_recipe') }}" class="black-cta btn add-btn">Add new recipe <i
+                <h5><a href="{{ url_for('add_recipe') }}" class="btn add-btn">Add new recipe <i
                             class="fas fa-plus-square right"></i></a></h5>
             </div>
-            <!-- All recipes of user -->
+
+            <!------------- All recipes of user -->
             <div>
                 <div class="col s12 m8 offset-m2">
                     <ul class="collapsible">
                         {% for recipe in uza %}
                         <li>
-                            <div class="collapsible-header text-shadow purple lighten-3">
+                            <div class="collapsible-header text-shadow purple lighten-1">
                                 <div class="col s2">
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-caret-down white-text darken-2"></i>
                                 </div>
-                                <div class="col s5">
+                                <div class="col s5 white-text darken-2">
                                     <strong>
                                         <h5>{{ recipe.recipe_name }}</h5>
                                     </strong>: <em>{{ recipe.date_posted }}</em>
                                 </div>
-                                <!-- Delete and edit recipe-->
+
+                                <!--------------------- Delete and edit recipe-->
                                 <div class="col s5">
-                                    <!-- Modal delete Trigger -->
+
+                                    <!------------------ Modal delete Trigger -->
                                     <a class="modal-trigger add-btn red darken-2 btn-small center align right"
                                         href="#modal{{ loop.index }}">Delete</a>
-                                    <!-- Modal delete Structure -->
+
+                                    <!------------------Modal delete Structure -->
                                     <div id="modal{{ loop.index }}" class="modal">
                                         <div class="modal-content">
                                             <h4>Are you sure you want to delete {{ recipe.recipe_name }}?</h4>
@@ -59,7 +64,7 @@
                             </div>
         
         
-                            <!-- Collapse body with all info of the recipe -->
+                            <!------------------ Collapse body with recipe info -->
         
                             <div class="collapsible-body grey lighten-3">
                                 <h6><a class="black-cta right btn-small add-btn "
@@ -68,7 +73,7 @@
                                 <h6>Ctegory: {{ recipe.category_name }}</h6>
                                 <h6>Serves: {{ recipe.adult_plates}}</h6>
         
-        
+                                   <!--------------------------------- cook-ingredient -->
                                 <div>
                                     <div class="row">
                                         <div class="col s4 custom-col">
@@ -81,10 +86,9 @@
                                                 {% endfor %}
                                             </ul>
                                         </div>
+             
         
-        
-        
-        
+                                <!--------------------------------- cook-direction -->
                                         <div class="col s8 custom-col">
                                             <h4>Directions</h4>
                                             <ul>
