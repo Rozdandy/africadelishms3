@@ -467,6 +467,51 @@ to clone the project by clicking the green Clone or download button and download
 5.	Press Enter. Your local clone will be created
 6.  Navigate to the correct file location after unzipping the files and cd <path to folder>
 
+#### Using the local copy
+
+* Sign up and create a cluster and a database with MongoDB.
+* Create the the afriq_delish DB and the collections  in the mongodb which are: categories, recipes, and users.
+
+     *                    RECIPES
+
+                _id: <ObjectId>
+
+                recipe_name: <string>
+                category_name: <string>
+                simple_description: <string>
+                prep_duration: <string>
+                ingredients: <array>
+                adult_plate: <string>
+                ingredient_name: <array>
+                cook_directions: <array>
+                cook_duration: <string>
+                cuisine: <string>
+                img_url: <string>
+                author: <ObjectId>
+                date_posted: <string>
+
+
+    *            USERS
+
+                _id: <ObjectId>
+                username: <string>
+                user_password: <string>
+
+
+    *             Categories
+
+                _id: <ObjectId>
+                category_name: <string>
+
+
+* Create a .env file, in which your MONGO_URI and SECRET_KEY values, are included and hidden
+* Install all requirements from the requirements.txt file using this command:
+        sudo -H pip3 -r requirements.txt
+* Add your .env file to .gitignore
+* Ensure to to change the last line from debug=False to debug=True in your app.py
+* Run the app locally by typing: flask run
+* The app should be running on localhost server which you can copy link past on browser.
+
 
 
 
