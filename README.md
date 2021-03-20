@@ -252,34 +252,55 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 
 
+6. Able to search for recipes by names or description
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * There on the page the user can easily use the search engine to check for any particular recipe either by name or description.
+
+
+7. Able to search for recipes categories
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * From the drop-downs, they can click on any category and the related recipes will be opened.
+
+
+
+8. Able to know the particular African country which the recipe belongs to.
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking on a particular recipe.
+    * The information about the recipe is revealed which include the nationality of such cuisine
 
 
 
 
 
 
+#### User/member goals:
+
+9. View my own profile
+
+    * Once a user, and has login, he/she is automatically taken to their profile page.
+    * There, they can see all their recipes that they have posted and may want to post more by click on a CTA button.
+
+10. Add my recipes
+
+    * As as a user, he/she can post recipes, the option to post recipes is only available to users on the navbar.
+    * A user can click on the link on the navbar and the page will open.
+  
+
+11.  To see instructions on how to add a recipe
+
+    * Once the user click on the link "Add Recipe" from the navbar, the form will opened.
+    * The input form is easy and direct to fill, and they can submit after filling in all the requirements by hitting the   green "ADD RECIPE" button.
 
 
+12. To able to edit or update their recipes
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    * This can be achieved when a user click on their posted recipes.
+    * There is an option to edit at the bottom of the page for the said recipe.
+    * When they click on the edit button, it takes them to form which is already pre-selected for the said recipe.
+    * They choose to edit in or oder to update or just cancel to leave the recipe
 
