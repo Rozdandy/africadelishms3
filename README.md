@@ -354,14 +354,13 @@ In addition to the aforementioned above, The Admin can:
 
 #### **1. Register Account:**
 
-Most of the features in the site and based on securities measures and are built on Defensive programming.
+Most of the features in the site are based on securities measures and are built on Defensive programming.
 
 * The registeration page allow intended users to register for free to create their own account. 
-
-    * In the site and at the top is the navbar, user can click on register link on the navbar and it will navigate them to the page.
-    * The intended user's username has to be between 5-15 which could be characters or numbers or combined.
-    * The password has to be between 5-20 characters and must contain at least one capital letter, lowercases and atleast a number.
-    * Attempt to use username/password that is not compliant with the specified requirements and you will get; (match the requested format) tooltips.
+* In the site and at the top is the navbar, user can click on register link on the navbar and it will navigate them to the page.
+* The intended user's username has to be between 5-15 which could be characters or numbers or combined.
+* The password has to be between 5-20 characters and must contain at least one capital letter, lowercases and atleast a number.
+* Attempt to use username/password that is not compliant with the specified requirements and you will get; (match the requested format) tooltips.
 
 #### **Login
 
@@ -370,18 +369,14 @@ Most of the features in the site and based on securities measures and are built 
     * User trying to brut force their ways in with wrong credentials will get: "Incorrect Username and/or Password"
     * Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
 
-#### ** Post recipe
+#### Post recipe
 
  This to enable users to submit recipe to their sites and thier profiles
 
-    * On the navbar is the "Add Recipe" link, a user click on it takes them to the input form.
-    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncoompleted fields.
-    * After filling all the fields completely, user can click the "Add Recipe" green button to submit.
-    * After flash message will show for scuccessfully submissions.
-
-
-
-
+* On the navbar is the "Add Recipe" link, a user click on it takes them to the input form.
+* A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncoompleted fields.
+* After filling all the fields completely, user can click the "Add Recipe" green button to submit.
+* After flash message will show for scuccessfully submissions.
 
 
 #### Edit or Update Recipe
@@ -396,14 +391,57 @@ Most of the features in the site and based on securities measures and are built 
     * After filling or changing the the desired fields, user can click the blue "Edit" button to submit.
 
 
-#### **Delete recipe
+#### Delete recipe
 
     This operation can only be carried out by users that have posted recipes to their names.
 
   A 
     * On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
+
     * A click on it will instantly remove the recipe completely.
+
     * Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
+
+
+
+B   * A user can also delete a recipe from their Profile page.
+
+    * On the accordion on their profile page, their are the "DELETE and EDIT" buttons.
+
+    * When a user click on the red delete button, there is a pop-up dialogue modal that will ask, if user is sure they want to delete the said recipes.
+
+    * User can either choose to delete or cancel
+
+
+####  Logout
+
+        This can only be carried out by those were already log in
+
+        * On the navbar is the logout option for the users.
+        * click on it will log them out and will reidrect to login page.
+
+
+## Bugs and resolves
+
+Most of the errors encoountered were syntaxes errors, especially in using Jinja templating to carryout for loops operations, the one that was most prominent was a floating footer in 404/.html pages and some other pages with less data contents. Below is example of one of the images;
+
+ [bug](static/testing/floatresult.png)
+
+## Resolves
+
+All the floats were resolved by applying this css code form materialise library
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
 
 
 
