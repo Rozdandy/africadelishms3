@@ -269,7 +269,7 @@ The developer used [materialize](https://materializecss.com/getting-started.html
     * A user can click on the "Add Recipes" link on the navbar and the page will open.
   
   
-10.  To see instructions on how to add a recipe
+10. To see instructions on how to add a recipe
 
     * Once the user click on the link "Add Recipe" from the navbar, the form will open.
     * The input form is easy and direct to fill, and they can submit after filling in all the requirements by hitting the   green "ADD RECIPE" button.
