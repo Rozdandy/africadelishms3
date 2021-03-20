@@ -20,8 +20,7 @@
             <h4><strong>MY RECIPES</strong></h4>
         </div>
         <div class="col s7 m4 right">
-            <h5><a href="{{ url_for('add_recipe') }}" class="btn add-btn">Add new recipe <i
-                        class="fas fa-plus-square right"></i></a></h5>
+            <h5><a href="{{ url_for('add_recipe') }}" class="btn add-btn">+ New recipe</a></h5>
         </div>
 
         <!------------- All recipes of user -->
@@ -70,14 +69,13 @@
                             <h6><a class="black-cta right btn-small add-btn "
                                     href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">Go to recipe <i
                                         class="fab fa-goodreads right"></i></a></h6>
-                            <h6>Ctegory: {{ recipe.category_name }}</h6>
-                            <h6>Serves: {{ recipe.adult_plates}}</h6>
+                            
 
                             <!--------------------------------- cook-ingredient -->
                             <div>
                                 <div class="row">
                                     <div class="col s4 custom-col">
-                                        <h4>Ingredients</h4>
+                                        <h4 class="hide-on-med-and-down">Ingredients</h4>
                                         <ul>
                                             {% for list in recipe.ingredients.splitlines() %}
                                             <li>
@@ -90,7 +88,7 @@
 
                                     <!--------------------------------- cook-direction -->
                                     <div class="col s8 custom-col">
-                                        <h4>Directions</h4>
+                                        <h4 class="hide-on-med-and-down">Directions</h4>
                                         <ul>
                                             {% for list in recipe.cook_direction.splitlines() %}
                                             <li>
@@ -107,6 +105,8 @@
                             <h6>Cooking Time: {{ recipe.cook_duration }}</h6>
                             <h6>Created By: {{ recipe.vegan}}</h6>
                             <h6>Created By: {{ recipe.author}}</h6>
+                            <h6>Category: {{ recipe.category_name }}</h6>
+                            <h6>Serves: {{ recipe.adult_plates}}</h6>
                         </div>
                     </li>
                     {% endfor %}
