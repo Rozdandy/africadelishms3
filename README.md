@@ -539,5 +539,52 @@ to clone the project by clicking the green Clone or download button and download
 
 
 
+# CREDITS
+
+## contents
+
+
+**References:**
+
+
+* Special thanks to Tim Nelson lecture videos, many of the codes on registeration, authorization, authentication many more I assisted me in completing this project.
+* Also the materialise theme from http://swarnakishore.github.io/MaterialSliderTheme/
+
+
+## Media
+
+All of the images in the site were supplied drom the sources below.
+
+* Game background Image:
+    *   https://www.pikrepo.com/flrcm/lasagna-on-top-of-white-ceramic-plate
+    *   https://www.pikrepo.com/ftfhq/assorted-foods-on-table
+    *   https://www.pikrepo.com/nuzcs/local-thai-food-buffet
+    *   https://www.pikrepo.com/frive/roasted-steak-with-sliced-tomato-on-white-plate
+
+* Images: 
+  
+    * https://www.pikrepo.com/fnuon/gray-curved-road-beside-arrow-left-signage-under-white-cloud-blue-skies#google_vignette
+    * https://www.pikrepo.com/fomjf/brown-wooden-fence-near-trees-covered-in-snow
+    * https://www.pikrepo.com/frdlf/red-leaf-tree-digital-wallpaper
+    * Among others are google images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
