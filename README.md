@@ -383,3 +383,54 @@ Most of the features in the site and based on securities measures and are built 
 
 
 
+
+#### Edit or Update Recipe
+
+ This feature is to enable users to update or editing an existing recipes posted by them 
+
+    * On the website user can click on the recipes posted by them from their profile page.
+    * Also, they click on the recipe created by them on the main page.
+    * The recipe will open on another page to reveal it information.
+    * At the bottom of the page there is blue " edit" button, when they click on it, it will take them to the pre-selected fields.
+    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncompleted fields.
+    * After filling or changing the the desired fields, user can click the blue "Edit" button to submit.
+
+
+#### **Delete recipe
+
+    This operation can only be carried out by users that have posted recipes to their names.
+
+  A 
+    * On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
+    * A click on it will instantly remove the recipe completely.
+    * Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
