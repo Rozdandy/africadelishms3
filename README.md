@@ -195,6 +195,70 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 
 
+# TESTING
+
+***Sites Validation***
+
+* [HTML-Validator](https://validator.w3.org/#validate_by_input"):  The site does not really understand the Jinja templating syntaxes, such as the {% for %} {% endfor %} which resulted in many errors but outside that, all the codes worked perfectly.
+
+
+* [Jshint](https://jshint.com/): When using the tool some warnings were flagged which mainly were the use of ES6 (use 'esversion: 6'). But the codes work perfectly however, i have taken note of that for next project.
+[Javascript test](static/testing/jsms3.png).
+
+
+* The [CSS validator](https://jigsaw.w3.org/css-validator/) was without any issues [CSS test](static/testing/cssms3.png).
+
+* The [PEP*](http://pep8online.com/checkresult) was without any issues [PEP8 test](static/testing/pep8.png).
+
+
+* Furthermore, the website was tested on the following: It works perfectly in them.
+
+      * Systems: Macbook Pro Laptop, HP laptop, and Lenovo laptop.
+      * Browsers: Chrome, Opera, Edge, Firefox, Safari
+      * Phones and Tabs: iPad Pro, different Iphone series and androids
+
+
+## **Testing user stories from UX section**
+
+#### First-time visitors goals:
+
+1. As a visitor, I want to be able to view the site in all modern devices, such as the desktop, tablet and mobile etc.
+
+      * The visitor can visite the website on computer, laptop, tablet and phone.
+
+2  Able to see all recipes as a visitor
+
+    * The vistors can navigate through the site form the homepage with the navbar. 
+    * The navbar is at the top of the site. They niew the whole recipes by click on the "View all categories" link in the navbar
+    * There is a hamburger menu for the mobile view to aid navigations.
+    * From the "View all categories" link , they can click on categories such breakfast menu, lunch etc.
+
+3  Register to be a member and a regular user
+    
+    * The visitor can navigate to the register page by clicking on the "register" link on the navbar. 
+    * There on the page, intended user can register.
+
+4  To be able to log in after registeration
+
+    * A user who has registered can easily log in from the navbar at the top of the site from any page by clicking on the "log in" link.
+    * The page will open, Therefore, user can log in fully.
+
+
+5. Able to search for recipes by names or description
+
+    * This operation could be performed by both regular users and non-regulars
+    * This can be achieved by clicking the "View All categories" button on the navbar.
+    * There on the page the user can easily use the search engine to check for any particular recipe.
+
+
+
+
+
+
+
+
+
+
 
 
 
