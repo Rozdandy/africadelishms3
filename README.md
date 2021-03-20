@@ -268,6 +268,7 @@ The developer used [materialize](https://materializecss.com/getting-started.html
     * As as a user, he/she can post recipes, the option to post recipes is only available to users on the navbar.
     * A user can click on the "Add Recipes" link on the navbar and the page will open.
   
+  
 10.  To see instructions on how to add a recipe
 
     * Once the user click on the link "Add Recipe" from the navbar, the form will open.
@@ -339,10 +340,10 @@ Most of the features in the site are based on securities measures and are built 
 
 #### Login
 
- This is to enable registered user to access the pages and their profiles
+This is to enable registered user to access the pages and their profiles
     
-    * User trying to brut force their ways in with wrong credentials would get: "Incorrect Username and/or Password"
-    * Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
+* User trying to brut force their ways in with wrong credentials would get: "Incorrect Username and/or Password"
+* Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
 
 #### Post recipe
 
