@@ -15,6 +15,59 @@
 Therefore, Afric & delish is an online foodbook where users can surf other African recipes, intended users are able to register and also submit their country's cuisine. Afric & delish is a recipe website for people who love to explore continental dishes right in their homes. It avail the opportunity for gourmets and epicures to search for tasty, palatable different African recipes to cook for their maximum enjoyment. The concept of the foodbook would allow users to explore the available menus, create theirs, edit or update them and also delete them if they are not needed again. The concept of the   CREATE, READ, UPDATE and DELETE (CRUD) are the crux of the lecture for Milestone three Project at Code Institute, which this project was be built upon.
 
 
+    + [**Website links:**](#--website-links---)
+- [**UX (USER EXPERIENCE)**](#--ux--user-experience---)
+  * [Project objectives](#project-objectives)
+  * [User stories](#user-stories)
+    + [*Admin Objectives:*](#-admin-objectives--)
+    + [*Developer objectives*](#-developer-objectives-)
+  * [Design](#design)
+      - [Fonts](#fonts)
+      - [**Colour Scheme**](#--colour-scheme--)
+  * [**Wireframe**](#--wireframe--)
+- [FEATURES](#features)
+  * [Existing Features](#existing-features)
+    + [Register Account](#register-account)
+    + [Log In](#log-in)
+    + [Log Out](#log-out)
+    + [View All Recipes](#view-all-recipes)
+    + [Search Recipes](#search-recipes)
+    + [Submit recipe](#submit-recipe)
+    + [Edit or Update Recipe](#edit-or-update-recipe)
+  * [Features to be Implemented in the Future](#features-to-be-implemented-in-the-future)
+- [**TECHNOLOGY USED**](#--technology-used--)
+    + [Tools](#tools)
+    + [Front-End Technologies](#front-end-technologies)
+    + [Back-End Technologies](#back-end-technologies)
+- [TESTING](#testing)
+  * [Information Architecture](#information-architecture)
+- [**Testing user stories from UX section**](#--testing-user-stories-from-ux-section--)
+      - [First-time visitors goals](#first-time-visitors-goals)
+      - [User/member goals:](#user-member-goals-)
+      - [Admin Objectives](#admin-objectives)
+    + [Developer objectives](#developer-objectives)
+  * [**Manual Testing**](#--manual-testing--)
+      - [Register Account](#register-account-1)
+      - [Login](#login)
+      - [Post recipe](#post-recipe)
+      - [Edit or Update Recipe](#edit-or-update-recipe-1)
+      - [Delete recipe](#delete-recipe)
+      - [Logout](#logout)
+  * [Bugs and resolves](#bugs-and-resolves)
+  * [Resolves](#resolves)
+  * [Unresolved bug](#unresolved-bug)
+- [DEPLOYMENT](#deployment)
+    + [Steps to Deploy: Local Deployment;](#steps-to-deploy--local-deployment-)
+      - [Using the local copy](#using-the-local-copy)
+    + [Steps to Remote Deployment:](#steps-to-remote-deployment-)
+- [CREDITS](#credits)
+  * [contents](#contents)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 # **UX (USER EXPERIENCE)**
 
 ## Project objectives
@@ -215,7 +268,6 @@ The developer used [materialize](https://materializecss.com/getting-started.html
 MongoDB atlas was used to store data for the  project has three collections in the database. The Schema for the data is below:
 
 <img src="static/testing/dataschemat.png">
-
 
 
 
