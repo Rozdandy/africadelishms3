@@ -383,34 +383,34 @@ Most of the features in the site are based on securities measures and are built 
 
  This feature is to enable users to update or editing an existing recipes posted by them 
 
-    * On the website user can click on the recipes posted by them from their profile page.
-    * Also, they click on the recipe created by them on the main page.
-    * The recipe will open on another page to reveal it information.
-    * At the bottom of the page there is blue " edit" button, when they click on it, it will take them to the pre-selected fields.
-    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncompleted fields.
-    * After filling or changing the the desired fields, user can click the blue "Edit" button to submit.
+* On the website user can click on the recipes posted by them from their profile page.
+* Also, they click on the recipe created by them on the main page.
+* The recipe will open on another page to reveal it information.
+* At the bottom of the page there is blue " edit" button, when they click on it, it will take them to the pre-selected fields.
+* A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncompleted fields.
+* After filling or changing the the desired fields, user can click the blue "Edit" button to submit.
 
 
 #### Delete recipe
 
     This operation can only be carried out by users that have posted recipes to their names.
 
-  A 
-    * On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
+A 
+* On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
 
-    * A click on it will instantly remove the recipe completely.
+* A click on it will instantly remove the recipe completely.
 
-    * Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
+* Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
 
 
 
 B   * A user can also delete a recipe from their Profile page.
 
-    * On the accordion on their profile page, their are the "DELETE and EDIT" buttons.
+* On the accordion on their profile page, their are the "DELETE and EDIT" buttons.
 
-    * When a user click on the red delete button, there is a pop-up dialogue modal that will ask, if user is sure they want to delete the said recipes.
+* When a user click on the red delete button, there is a pop-up dialogue modal that will ask, if user is sure they want to delete the said recipes.
 
-    * User can either choose to delete or cancel
+* User can either choose to delete or cancel
 
 
 ####  Logout
@@ -516,27 +516,26 @@ to clone the project by clicking the green Clone or download button and download
 
 ### Steps to Remote Deployment:
 
-    * In Heroku, create an app with unique name.
+* In Heroku, create an app with unique name.
 
-    * Ensure to have created a requirements.txt file so Heroku can install the required dependencies to run the app.
-            i.e  sudo pip3 freeze --local > requirements.txt
-    * Create your Procfile file, Heroku need to know the type of application that is being deployed, and how to run it.
-                 echo web: python run.py > Procfile
+* Ensure to have created a requirements.txt file so Heroku can install the required dependencies to run the app.
+        i.e  sudo pip3 freeze --local > requirements.txt
+* Create your Procfile file, Heroku need to know the type of application that is being deployed, and how to run it.
+                echo web: python run.py > Procfile
 
-     * Link that app to the GitHub repository by going to the "Deploy" link in the main app menu.
-     * Connect GitHub as the Deployment Method, and select Enable Automatic Deployment.
+    * Link that app to the GitHub repository by going to the "Deploy" link in the main app menu.
+    * Connect GitHub as the Deployment Method, and select Enable Automatic Deployment.
 
-    * Click on Settings tab, click to add the corresponding Config Variables as present in your files
+* Click on Settings tab, click to add the corresponding Config Variables as present in your files
 
 
-            * IP : 0.0.0.0
-            * PORT : 8080
-            * MONGO_URI : <your Mongo DB link>
-            * SECRET_KEY : <your created secret key>
+        * IP : 0.0.0.0
+        * PORT : 8080
+        * MONGO_URI : <your Mongo DB link>
+        * SECRET_KEY : <your created secret key>
 
-    * If steps are carefully done the app will successfully deployed to Heroku and running on a live server.
+* If steps are carefully done the app will successfully deployed to Heroku and running on a live server.
            
-
 
 
 # CREDITS
@@ -570,21 +569,23 @@ All of the images in the site were supplied drom the sources below.
 
 
 
+* This sites were sources of inspiration to me:
+    * https://vegan-gluten.herokuapp.com/
+    * https://ms3-breaktasty.herokuapp.com/
+    * https://ms3-breaktasty.herokuapp.com/
 
 
+**Miscellaneous**
 
+ * The lecture videos and notes
+ * [Stack overflow](https://stackoverflow.com/) To seek solutions to fix bugs.
+ * [W3Schools](https://www.w3schools.com/) I used this site for references in many instances.
 
+## Acknowledgements
 
+I received inspiration for this project from:
 
-
-
-
-
-
-
-
-
-
-
-
-
+* God for Mercies.
+* Tim Nelson for great tutor videos
+* My mentor for advice and feedback.
+* Student care and student tutors for being there when I needed them most.
