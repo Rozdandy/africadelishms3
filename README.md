@@ -407,7 +407,9 @@ All the floats were resolved by applying this css code form materialise library
 
  body {display: flex; min-height: 100vh; flex-direction: column;} main {flex: 1 0 auto;}
 
-## Another bug that was found in the last minute of this project, was a white automatic indent in the add_recipez form, at recipe.cook_direction. I found the bug at the last phase of the submission, I tried last minute troubleshoot to know why it is happening but could not fix it and had to submit due to deadline. Below is the picture. The bug could be found at 'Add Recipe' link under the field of 'Direction'
+## Unresolved bug
+
+Another bug that was found in the last minute of this project, was a white automatic indent in the add_recipez form, at recipe.cook_direction. I found the bug at the last phase of the submission, I tried last minute troubleshoot to know why it is happening but could not fix it and had to submit due to deadline. Below is the picture. The bug could be found at 'Add Recipe' link under the field of 'Direction'
 
 <img src="static/testing/bug.png">
 
