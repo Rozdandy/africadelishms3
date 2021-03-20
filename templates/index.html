@@ -1,6 +1,7 @@
     {% extends "base.html" %}
     {% block content %}
-    <!--    HOMEPAGE -->
+
+    <!--    homepage----------------------slider carousel-->
 
     <div class="container-fluid">
         <div class="slider">
@@ -43,6 +44,7 @@
 
     <br>
 
+            <!-----------------------------------parallax-header-->
     <div class="container hide-on-med-and-down">
         <h6 class="ourProjects">The Irresistible African Recipes</h6>
         <br>
@@ -52,6 +54,7 @@
 
     <br>
     <br>
+                <!-----------------------------------parallax-container-->
 
     <div class="parallax-container section scrollspy valign-wrapper" id="aboutus">
         <div class="section no-pad-bot">
@@ -96,7 +99,9 @@
                                 <figcaption>
 
                                     <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
-                                            <h2>{{ recipe.recipe_name }}</h2>
+                                            <h2>Recipe: <strong>{{ recipe.recipe_name }}</strong></h2>
+                                            <h2>Cusine: <strong>{{ recipe.cuisine }}</strong></h2>
+                                            <h2>By: <em>{{ recipe.author }}</em></h2>
                                         </a></p>
 
                                 </figcaption>
