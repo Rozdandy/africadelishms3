@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@500&family=Exo+2:wght@300&display=swap');
 
-
+/* https://github.com/SwarnaKishore/MaterialSliderTheme/blob/gh-pages/css/index.css */ 
+/* some codes were lifted to style the navbar, parrallax and card of the index.html */
 /* to prevent footer floating */
  body {
     display: flex;

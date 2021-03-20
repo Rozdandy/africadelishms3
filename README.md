@@ -577,6 +577,7 @@ The website was developed using GitPod IDE and using Git to push to store them i
 
 * Special thanks to Tim Nelson lecture videos, most of the codes on registeration, authorization, authentication many more assisted me in completing this project.
 * Also the materialise theme from http://swarnakishore.github.io/MaterialSliderTheme/
+* https://github.com/SwarnaKishore/MaterialSliderTheme/blob/gh-pages/index.html, the code from the site partly form my project, the theme.
 
 ## Media
 
