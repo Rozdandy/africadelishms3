@@ -195,7 +195,9 @@ def add_recipe():
         return redirect(url_for("get_recipez"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template(
+        "add_recipe.html", cuisines=cuisines, categories=categories)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -228,10 +230,11 @@ def edit_recipe(recipe_id):
         return redirect(url_for("get_recipez"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html",
-        recipe=recipe, categories=categories)
+        recipe=recipe, categories=categories, cuisines=cuisines)
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -243,10 +246,15 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipez", category='all'))
 
 
+@app.route("/cusines")
+def cuisines():
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template("cuisines.html", cuisines=cuisines)
+
+
 @app.route("/get_categories")
 def get_categories():
-    """             TO MANAGE CATEGORIES """
-    # categories can only accessed by admin 
+    # categories can only accessed by admin
     if not session.get("user") == "admin":
         return render_template("error_handle/404.html")
 

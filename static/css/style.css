@@ -234,13 +234,6 @@ font-family: 'Exo 2', sans-serif;
     
 }
 
-.reset{
-    margin-bottom: 20px;
-}
-
-h4.search-button {
-    margin-top: 40px;
-}
 
 .headerz {
     color: #ba68c8;
@@ -249,7 +242,7 @@ h4.search-button {
 }
 
 
-/*------------------------------------- Buttons */
+/*------------------@profile----------------- Buttons-- */
 .add-btn {
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
@@ -261,7 +254,17 @@ h4.search-button {
     
 }
 
-/* register-button */
+/*-------------------btn @get_recipez-html-- */
+.reset{
+    margin-bottom: 20px;
+}
+
+/*-----------------btn @get_recipez-html-- */
+h4.search-button {
+    margin-top: 40px;
+}
+
+/* -----------------------btn-@register--- */
 .reg-btn-color{
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
