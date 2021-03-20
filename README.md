@@ -212,6 +212,8 @@ The developer used [materialize](https://materializecss.com/getting-started.html
 
 # **Testing user stories from UX section**
 
+Note: Developer entererd lot of gibberish text such as 'fdlklbjobljbknjxbk' as a different user in order to text the site.
+
 #### First-time visitors goals
 
     As a visitor, I want to be able:
