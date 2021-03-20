@@ -1,103 +1,103 @@
-{% extends "base.html" %}
-{% block content %}
+    {% extends "base.html" %}
+    {% block content %}
 
 
 
-    <div class="container">
-    
-        <div class="row">
-            <h3 class="center-align">{{ recipe.recipe_name }}</h3>
-        </div>
-    
-        <br>
-    
-    
-    
+        <div class="container">
         
-            <!-- Image and info -->
             <div class="row">
-                <div class="col s12 m4 center-align">
-                    <h6>National Cuisine Afilliation:{{ recipe.cuisine_name }}</h6>
-                    <br>
-                    <h6>Number of Adults Meal Could Persons: {{ recipe.adult_plates }}</h6>
-                    <br>
-                    <h6>Prep time: {{ recipe.prep_duration }}</h6>
-                    <br>
-                    <h6>Category: {{ recipe.category_name }}</h6>
-                    <br>
-                    <h6><em>Posted by: {{recipe.author}}</em></h6>
-    
-                </div>
-                <div class="col s12 m8" id="web-img">
-                    <img class="img_recipe" src="{{ recipe.img_url }}" alt="Image">
-                </div>
+                <h3 class="center-align">{{ recipe.recipe_name }}</h3>
             </div>
-    
-             <br>
-             <br>
-    
-        <!-- Ingredients and instructions -->
-        <div class="row">
-            <div class="col s12 m4">
-                <h4>Ingredients</h4>
-                <ul>
-                    {% for list in recipe.ingredients.splitlines() %}
-                    <li>
-                        <p><i class="fas fa-circle"></i> {{ list }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-    
-    
-    
-    
-            <div class="col s12 m8">
-                <h4>Directions</h4>
-                <ul>
-                    {% for list in recipe.cook_direction.splitlines() %}
-                    <li>
-                        <p><i class="fas fa-leaf"></i> {{ list }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    
-    
-        <!-- Description of Meal-->
-        {% if recipe.simple_description %}
-        <div class="row">
-            <div class="col s12">
-                <h5>Meal Description</h5>
-                <p>{{ recipe.simple_description }}</p>
-            </div>
-        </div>
-        {% else %}
-        {% endif %}
-    
-        <br>
-        <br>
-    
-    
-    
-    
-        <div class="col s3">
-    
-    
-            {% if session.user|lower == recipe.author|lower %}
-            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn red darken-2">Delete</a>
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn light-blue lighten-1">
-                Edit
-    
-            </a>
-            {% endif %}
-        </div>
-    </div>
-    <br>
-    <br>
+        
+            <br>
+        
+            
+                <!------------------------info -->
+                <div class="row">
+                    <div class="col s12 m4 center-align">
+                        <h6>National Cuisine Afilliation:{{ recipe.cuisine_name }}</h6>
+                        <br>
+                        <h6>Number of Adults Meal Could Persons: {{ recipe.adult_plates }}</h6>
+                        <br>
+                        <h6>Prep time: {{ recipe.prep_duration }}</h6>
+                        <br>
+                        <h6>Category: {{ recipe.category_name }}</h6>
+                        <br>
+                        <h6><em>Posted by: {{recipe.author}}</em></h6>
+        
+                    </div>
 
- {% endblock %}    
+                    <!-------------------------Image--------->
+                    <div class="col s12 m8" id="web-img">
+                        <img class="img_recipe" src="{{ recipe.img_url }}" alt="Image">
+                    </div>
+                </div>
+        
+                <br>
+                <br>
+        
+            <!-- Ingredients and instructions -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        {% for list in recipe.ingredients.splitlines() %}
+                        <li>
+                            <p><i class="fas fa-circle"></i> {{ list }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        
+        
+        
+             <!-- cook-instructions -->
+                <div class="col s12 m8">
+                    <h4>Directions</h4>
+                    <ul>
+                        {% for list in recipe.cook_direction.splitlines() %}
+                        <li>
+                            <p><i class="fas fa-leaf"></i> {{ list }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        
+        
+            <!-- Description of Meal-->
+            {% if recipe.simple_description %}
+            <div class="row">
+                <div class="col s12">
+                    <h5>Meal Description</h5>
+                    <p>{{ recipe.simple_description }}</p>
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        
+            <br>
+            <br>
+        
+        
+        
+        
+            <div class="col s3">
+        
+        
+                {% if session.user|lower == recipe.author|lower %}
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn red darken-2">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large add-btn light-blue lighten-1">
+                    Edit
+        
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <br>
+        <br>
+
+    {% endblock %}    
 
 
 
