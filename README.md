@@ -514,28 +514,28 @@ to clone the project by clicking the green Clone or download button and download
 
 
 
+### Steps to Remote Deployment:
+
+    * In Heroku, create an app with unique name.
+
+    * Ensure to have created a requirements.txt file so Heroku can install the required dependencies to run the app.
+            i.e  sudo pip3 freeze --local > requirements.txt
+    * Create your Procfile file, Heroku need to know the type of application that is being deployed, and how to run it.
+                 echo web: python run.py > Procfile
+
+     * Link that app to the GitHub repository by going to the "Deploy" link in the main app menu.
+     * Connect GitHub as the Deployment Method, and select Enable Automatic Deployment.
+
+    * Click on Settings tab, click to add the corresponding Config Variables as present in your files
 
 
+            * IP : 0.0.0.0
+            * PORT : 8080
+            * MONGO_URI : <your Mongo DB link>
+            * SECRET_KEY : <your created secret key>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    * If steps are carefully done the app will successfully deployed to Heroku and running on a live server.
+           
 
 
 
