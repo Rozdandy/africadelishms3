@@ -444,6 +444,30 @@ All the floats were resolved by applying this css code form materialise library
 
 
 
+# **DEPLOYMENT**
+
+The website was developed using both GitPod and using Git push to store them in GitHub, while [Heroku](https://dashboard.heroku.com/apps) is use to launch the site to the internet. 
+
+### Steps to Deploy: Local Deployment;
+
+*Requirements*
+* [Python3](https://www.python.org/downloads/) to run the application backend.
+* [PIP](https://pip.pypa.io/en/stable/installing/) to install all required packages.     
+* [GIT](https://www.atlassian.com/git/tutorials/install-git) for push and version control.
+* [MongoDB](https://www.mongodb.com/) database to store data on MongoDB Atlas.  
+
+The project need to be clone locally by the following steps:
+
+1. Browse the repository link [africadelishms3](https://github.com/Rozdandy/africadelishms3) 
+to clone the project by clicking the green Clone or download button and downloading the project.
+
+2.  Or by entering the following into the Git CLI terminal: https://github.com/Rozdandy/africadelishms3.git
+3.	Open Githpod workspace, that is Git Bash.
+4.	Using the command line, type git clone, and then paste the URL you copied above
+5.	Press Enter. Your local clone will be created
+6.  Navigate to the correct file location after unzipping the files and cd <path to folder>
+
+
 
 
 
