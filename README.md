@@ -405,23 +405,23 @@ All the floats were resolved by applying this css code form materialise library
  body {display: flex; min-height: 100vh; flex-direction: column;} main {flex: 1 0 auto;}
 
 
-# **DEPLOYMENT**
+# DEPLOYMENT
 
-The website was developed using both GitPod and using Git push to store them in GitHub, while [Heroku](https://dashboard.heroku.com/apps) is use to launch the site to the internet. 
+The website was developed using GitPod IDE and using Git to push to store them in GitHub, while [Heroku](https://dashboard.heroku.com/apps) is use to launch the site to the internet. 
 
 ### Steps to Deploy: Local Deployment;
 
 *Requirements*
+
 * [Python3](https://www.python.org/downloads/) to run the application backend.
+* [GitHub](https://github.com/) as a project repository to save.
 * [PIP](https://pip.pypa.io/en/stable/installing/) to install all required packages.     
 * [GIT](https://www.atlassian.com/git/tutorials/install-git) for push and version control.
 * [MongoDB](https://www.mongodb.com/) database to store data on MongoDB Atlas.  
 
-The project need to be clone locally by the following steps:
+*The project need to be clone locally through the following steps:*
 
-1. Browse the repository link [africadelishms3](https://github.com/Rozdandy/africadelishms3) 
-to clone the project by clicking the green Clone or download button and downloading the project.
-
+1. Browse the repository link [africadelishms3](https://github.com/Rozdandy/africadelishms3) to clone the project by clicking the green Clone or download button and downloading the project to local computer and extracting it.
 2.  Or by entering the following into the Git CLI terminal: https://github.com/Rozdandy/africadelishms3.git
 3.	Open Githpod workspace, that is Git Bash.
 4.	Using the command line, type git clone, and then paste the URL you copied above
@@ -474,21 +474,17 @@ to clone the project by clicking the green Clone or download button and download
 * The app should be running on localhost server which you can copy link past on browser.
 
 
-
 ### Steps to Remote Deployment:
 
 * In Heroku, create an app with unique name.
-
 * Ensure to have created a requirements.txt file so Heroku can install the required dependencies to run the app.
-        i.e  sudo pip3 freeze --local > requirements.txt
+        i.e  pip3 freeze --local > requirements.txt
 * Create your Procfile file, Heroku need to know the type of application that is being deployed, and how to run it.
                 echo web: python run.py > Procfile
-
-    * Link that app to the GitHub repository by going to the "Deploy" link in the main app menu.
-    * Connect GitHub as the Deployment Method, and select Enable Automatic Deployment.
+* Link that app to the GitHub repository by going to the "Deploy" link in the main app menu.
+* Connect GitHub as the Deployment Method, and select Enable Automatic Deployment.
 
 * Click on Settings tab, click to add the corresponding Config Variables as present in your files
-
 
         * IP : 0.0.0.0
         * PORT : 8080
@@ -507,33 +503,25 @@ to clone the project by clicking the green Clone or download button and download
 **References:**
 
 
-* Special thanks to Tim Nelson lecture videos, many of the codes on registeration, authorization, authentication many more I assisted me in completing this project.
+* Special thanks to Tim Nelson lecture videos, most of the codes on registeration, authorization, authentication many more assisted me in completing this project.
 * Also the materialise theme from http://swarnakishore.github.io/MaterialSliderTheme/
-
 
 ## Media
 
-All of the images in the site were supplied drom the sources below.
+All of the images in the site were supplied from the sources below.
 
-* Game background Image:
+* slider Image:
     *   https://www.pikrepo.com/flrcm/lasagna-on-top-of-white-ceramic-plate
     *   https://www.pikrepo.com/ftfhq/assorted-foods-on-table
     *   https://www.pikrepo.com/nuzcs/local-thai-food-buffet
     *   https://www.pikrepo.com/frive/roasted-steak-with-sliced-tomato-on-white-plate
 
-* Images: 
-  
-    * https://www.pikrepo.com/fnuon/gray-curved-road-beside-arrow-left-signage-under-white-cloud-blue-skies#google_vignette
-    * https://www.pikrepo.com/fomjf/brown-wooden-fence-near-trees-covered-in-snow
-    * https://www.pikrepo.com/frdlf/red-leaf-tree-digital-wallpaper
-    * Among others are google images
-
-
 
 * This sites were sources of inspiration to me:
+
     * https://vegan-gluten.herokuapp.com/
     * https://ms3-breaktasty.herokuapp.com/
-    * https://ms3-breaktasty.herokuapp.com/
+    * https://desserts-2bn.herokuapp.com/
 
 
 **Miscellaneous**
