@@ -1,57 +1,57 @@
-{% extends "base.html" %}
-{% block content %}
- <!--    HOMEPAGE -->
+    {% extends "base.html" %}
+    {% block content %}
+    <!--    HOMEPAGE -->
 
-<div class="container-fluid">
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="{{ url_for('static', filename='images/angolanfeij.jpg') }}">
-                <div class="caption center-align">
-                    <h3>Angolan Feijoada</h3>
-                    <h5 class="light grey-text text-lighten-3">Angolan national favorite dish; Very rich, savory, &amp;
-                        satisfying</h5>
-                </div>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/jollofrice.jpg') }}">
-                <div class="caption left-align">
-                    <h3>Nigerian Jollof Rice</h3>
-                    <h5 class="light grey-text text-lighten-3">Without controversy; Nigerian Jollof Rice, simply the
-                        best
-                    </h5>
-                </div>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/ghanabanku.jpg') }}">
-                <div class="caption right-align">
-                    <h3>Ghanaian Banku</h3>
-                    <h5 class="light grey-text text-lighten-3">Banku and Tilapia; food for the champions</h5>
-                </div>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/zambianshima.jpg') }}">
-                <div class="caption center-align">
-                    <h3>Zambian Nshima</h3>
-                    <h5 class="light grey-text text-lighten-3">Zambian real meal: Nshima and ndiwo</h5>
-                </div>
-            </li>
-        </ul>
+    <div class="container-fluid">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="{{ url_for('static', filename='images/angolanfeij.jpg') }}">
+                    <div class="caption center-align">
+                        <h3>Angolan Feijoada</h3>
+                        <h5 class="light grey-text text-lighten-3">Angolan national favorite dish; Very rich, savory, &amp;
+                            satisfying</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/jollofrice.jpg') }}">
+                    <div class="caption left-align">
+                        <h3>Nigerian Jollof Rice</h3>
+                        <h5 class="light grey-text text-lighten-3">Without controversy; Nigerian Jollof Rice, simply the
+                            best
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/ghanabanku.jpg') }}">
+                    <div class="caption right-align">
+                        <h3>Ghanaian Banku</h3>
+                        <h5 class="light grey-text text-lighten-3">Banku and Tilapia; food for the champions</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/zambianshima.jpg') }}">
+                    <div class="caption center-align">
+                        <h3>Zambian Nshima</h3>
+                        <h5 class="light grey-text text-lighten-3">Zambian real meal: Nshima and ndiwo</h5>
+                    </div>
+                </li>
+            </ul>
 
+        </div>
     </div>
-</div>
 
-<br>
+    <br>
 
-<div class="container hide-on-med-and-down">
+    <div class="container hide-on-med-and-down">
         <h6 class="ourProjects">The Irresistible African Recipes</h6>
         <br>
-        
-</div>
+
+    </div>
 
 
-                        <br>
-                        <br>
+    <br>
+    <br>
 
     <div class="parallax-container section scrollspy valign-wrapper" id="aboutus">
         <div class="section no-pad-bot">
@@ -61,7 +61,10 @@
                     <h3 class="aboutUs">African Cuisine</h3>
                 </div>
                 <div class="center row col s12" style="color: white;">
-                    <p>Traditionally, the various cuisines of Africa use a combination of locally available fruits, cereal grains and vegetables, as well as milk and meat products, and do not usually have food imported. In some parts of the continent, the traditional diet features an abundance of milk, curd and whey products.</p>
+                    <p>Traditionally, the various cuisines of Africa use a combination of locally available fruits, cereal
+                        grains and vegetables, as well as milk and meat products, and do not usually have food imported. In
+                        some parts of the continent, the traditional diet features an abundance of milk, curd and whey
+                        products.</p>
                 </div>
 
             </div>
@@ -72,53 +75,49 @@
     <br>
 
 
-
-
-
-<div id="ourProjects" class="section scrollspy">
-    <div class="container">
-        <h6 class="ourProjects">Recipes</h6>
-        <br>
-        <br>
-        <div class="row">
- {% for recipe in recipes %}
+    <!-----------------------------------recipe image-card-->
+    <div id="ourProjects" class="section scrollspy">
+        <div class="container">
+            <h6 class="ourProjects">Recipes</h6>
+            <br>
+            <br>
+            <div class="row">
+                {% for recipe in recipes %}
                 {% if loop.index<=3 %}
 
-            <div class="col s12 m4">
-      			
-      			<ul class="demo-3">
-                      
-			    <li>
-			        <figure>
-                        <img src="{{ recipe.img_url }}" class="responsive-img" alt="food image"/>
-                       
-			            <figcaption>
-			        
-                           <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><h2>{{ recipe.recipe_name }}</h2></a></p>
-                           
-                        </figcaption>
-                        <div> <h2>{{ recipe.recipe_name }}</h2></div>
-			        </figure>
-                </li>
-                
-			</ul>
-	      </div>
- {% endif %}
-                {% endfor %}
-       </div>
-        <!--row-->
+                <div class="col s12 m4">
 
-        <div class="center">
-            <a class="waves-effect waves-light btn purple lighten-1" href="{{ url_for('get_recipez', category='all') }}">View more</a>
+                    <ul class="demo-3">
+
+                        <li>
+                            <figure>
+                                <img src="{{ recipe.img_url }}" class="responsive-img" alt="food image" />
+
+                                <figcaption>
+
+                                    <p><a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                                            <h2>{{ recipe.recipe_name }}</h2>
+                                        </a></p>
+
+                                </figcaption>
+                                
+                            </figure>
+                        </li>
+
+                    </ul>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            
+            <!--view more section-->
+            <div class="center">
+                <a class="waves-effect waves-light btn purple lighten-1"
+                    href="{{ url_for('get_recipez', category='all') }}">View more</a>
+            </div>
         </div>
     </div>
-</div>
 
 
-{% endblock %}
-
-
-
-
-
-
+    {% endblock %}
