@@ -91,46 +91,107 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
  [Balsamiq App](https://balsamiq.com/) was used for the design architechture and  the site mockups. Although, there were some minor changes in the design but mostly the layout on the app gave the guidance, a step by step guard to build the final website. Below is the link to the wireframe for the desktop and mobile device.
 
 **View all**
+
  * [Wireframe](wireframe/ms3mockup.pdf)
         
-
 
 # **FEATURES**
 
   **Existing Features**
 
-### **1. Register Account:**
+### Register Account
 
 * The registeration page allow intended users to register for free to create their own account. For security reason, there is a built-in authorization and    authentication  to check certain criteria to be met before an   account is validated. All passwords are hashed for further securities.
 
-### **2. Log In
+### Log In
 
 * This is for users that registered, more authentication and authorization was embedded to check that the hashed passwords and username if they matched in the database.
 
-### **Log Out
+### Log Out
 
 * To enable users to log out of their accounts with a click of the button.
 
-### **View All Recipes
+### View All Recipes
 
 * On the All Recipes link on the Navbar, which will open All recipes page when clicked, it displays all the available recipes on the website.
 
 
-### ** Search Recipes
+### Search Recipes
 
 * A user may want to search for a certain recipe by their name or by their description.
 
-### ** Submit recipe
+### Submit recipe
 
-### ** Edit or Update Recipe
-
-
+### Edit or Update Recipe
 
 
 
+## Future Features to be Implemeneted
+
+ * Pagination
+ * Google login
+ 
+ * To bind recipes to national related country
+ * Lazy loading images
+ * Prevent duplicate subscribers
+ * User profiles with description, avatar, post list
+ * Page loading animation
+ * Subscription letters
+ * Functionl emails
+ * Admin console
+ * Contact form and admin to be able to see all recieved messages directly in the admin console
+ * Recipe image url validation
+ * Sort recipes by tag, cousine, cook or prep time, even more specific dietary needs
+ * Recipe Comments
 
 
 
+
+
+# **TECHNOLOGY USED**
+
+*The follwoing Technologies, Frameworks, and Libraries were used to build the project*  
+
+### Tools  
+
+* **Git**: It was used for version control which uses the Gitpod terminal to commit to Git and Push codes to GitHub
+* **GitHub**:         [GitHub](https://github.com/) Developer used GitHub as a project repository to save.
+* **Gitpod**:         [GitHub](https://www.gitpod.io/) The project used the Gitpod IDE as my workspace to develop the website. It is linked to GitHub repository to store data when coding.
+* **Icons**:          [Font Awesome](https://fontawesome.com/) Social Media Icons were taken from this site.
+* **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
+
+ ## Front-End Technologies
+
+* [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML): HTML/HTML5 the language used to create and as the markup text to add content to the website.  
+* [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS): It provides the styling for the website.
+* [**jQuery 3.4.0**](https://jquery.com/) Used as the main JavaScript functionality.
+* [materialize](https://materializecss.com/getting-started.html) Used to design the  mobile-first responsive layout for the website, forms and accordion.
+
+
+## Back-End Technologies
+*  Flask
+
+    * [**Flask 1.0.2**](https://flask.palletsprojects.com/en/1.1.x/): A microframework used in python.
+    * [**Jinja 2.10**](https://jinja.palletsprojects.com/en/2.10.x/):  Used for templating with Flask.
+    * [**Werkzeug 0.16**](https://werkzeug.palletsprojects.com/en/0.16.x/): Used for password hashing, authentication, and authorization.
+
+* Python
+
+    * [**Python 3.6.7**](https://flask.palletsprojects.com/en/1.1.x/): The main back-end programming language.
+    * [**MongoDB Atlas**](https://www.mongodb.com/): Used to store database in the cloud.
+    * PyMongo
+    
+* Heroku
+
+    * [**Heroku**](https://www.heroku.com/): Used to launch website.
+
+* **CSS validator**:  [CSS validator](https://jigsaw.w3.org/css-validator/) The site was used to test for the validity of my CSS code. 
+* **HTML validator**: [HTML validator](https://validator.w3.org/) The site was used to test for the validity of my HTML code.
+* **Hover.css**:      [Hover.css](https://ianlunn.github.io/Hover/) The site was used on the navigation bar links and Social Media icons in the footer to create an hovering effects.
+* **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
+* **freeformatter**:  [freeformatter](https://www.freeformatter.com/html-formatter.html) The site was used to format HTML.
+* **Lighthouse**:     [Balsamiq](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) To audit the site perfomance and accessibility.
+* **Am I Responsive?**:[Am I Responsive?](http://ami.responsivedesign.is/) It was used to test the responsiveness of the site and to take screenshot of devices.
 
 
 
