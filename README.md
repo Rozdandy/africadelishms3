@@ -251,7 +251,6 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
     * There on the page the user can easily use the search engine to check for any particular recipe.
 
 
-
 6. Able to search for recipes by names or description
 
     * This operation could be performed by both regular users and non-regulars
@@ -272,10 +271,6 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
     * This operation could be performed by both regular users and non-regulars
     * This can be achieved by clicking on a particular recipe.
     * The information about the recipe is revealed which include the nationality of such cuisine
-
-
-
-
 
 
 #### User/member goals:
@@ -302,5 +297,89 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
     * This can be achieved when a user click on their posted recipes.
     * There is an option to edit at the bottom of the page for the said recipe.
     * When they click on the edit button, it takes them to form which is already pre-selected for the said recipe.
-    * They choose to edit in or oder to update or just cancel to leave the recipe
+    * They choose to edit in order to update or just cancel to leave the recipe.
+
+
+13.  To be able to delete my recipes that are not needed again
+
+    * This can be achieved when a user click on their posted recipes.
+    * There is an option to delete sitting next to the edit button at the bottom of the page for the said recipe.
+    * When they click on the delete button, it wipes off immediately.
+
+
+14. To be able to log out
+
+    * This can be achieved when a registered user click on log out button on the navbar.
+    * THis button is only available to users that logged in.
+
+
+
+14. To be able recieve feedback if they scuccessfully performed any of the CRUD operations
+
+    * User recieve feedback in form flash messages for certain action carried out such as; registeration, login, logout, poste recipes etc.
+
+
+15. To be able to recieve an error message for perform the activities that is not within the scope of the website or there is an issue with database.
+
+    * User either gets 404/ or 405 message performing functionalities tat is not within the scope of the site.
+
+
+#### *Admin Objectives:*
+
+In addition to the aforementioned above, The Admin can:
+
+ 16. To able be able add new categories and recipes
+    
+    * Just like any other users, the admin is able to perfom all the functionalities above which include, adding categories and recipes.
+    * Only the admin can:
+
+        * Add, edit categories and recipes, for the site.
+        * Delete categories, and recipes, in order to regulate unappropriate submissions.
+
+    * Those operations can be performed, when the recorgnize admin log in
+    * The admin profile has access to all posted recipes by users and categories unlike users' that have access to their individual posted recipes in their profiles
+
+
+### Developer objectives
+    By building the website, the following skills were demonstrated by the developer:
+
+ * Able to perform the CRUD operations using python, jinja, MongoDb etc.
+ * good use of Jinja templating, Python, non-relational database MongoDb
+ * good use of materialize library combine with JavaScript knowledge.
+ * how to make the website lives by deploying to Heroku.
+
+
+
+## **Manual Testing**
+
+#### **1. Register Account:**
+
+Most of the features in the site and based on securities measures and are built on Defensive programming.
+
+* The registeration page allow intended users to register for free to create their own account. 
+
+    * In the site and at the top is the navbar, user can click on register link on the navbar and it will navigate them to the page.
+    * The intended user's username has to be between 5-15 which could be characters or numbers or combined.
+    * The password has to be between 5-20 characters and must contain at least one capital letter, lowercases and atleast a number.
+    * Attempt to use username/password that is not compliant with the specified requirements and you will get; (match the requested format) tooltips.
+
+#### **Login
+
+ This is to enable registered user to access the pages and their profiles
+    
+    * User trying to brut force their ways in with wrong credentials will get: "Incorrect Username and/or Password"
+    * Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
+
+#### ** Post recipe
+
+ This to enable users to submit recipe to their sites and thier profiles
+
+    * On the navbar is the "Add Recipe" link, a user click on it takes them to the input form.
+    * A user trying to submit an empty form or uncompleted form will recieve a tooltip pointer to the uncoompleted fields.
+    * After filling all the fields completely, user can click the "Add Recipe" green button to submit.
+    * After flash message will show for scuccessfully submissions.
+
+
+
+
 
