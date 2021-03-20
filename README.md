@@ -281,7 +281,7 @@ The developer used [materialize](https://materializecss.com/getting-started.html
     * When they click on the edit button, it takes them to the form which is already pre-selected for the said recipe.
     * They can decide to edit in order to update or just cancel to leave the recipe.
 
-12.  To be able to delete my recipes that are not needed again
+12. To be able to delete my recipes that are not needed again
 
     * This can be achieved when a user click on their posted recipes.
     * There is an option to delete sitting next to the edit button at the bottom of the page for the said recipe.

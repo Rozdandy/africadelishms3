@@ -1,50 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@500&family=Exo+2:wght@300&display=swap');
 
 
-
+/* to prevent footer floating */
  body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Exo 2', sans-serif;
   }
 
   main {
     flex: 1 0 auto;
   }
 
-
-
-
-
+/* gives text depth */
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+
+/* flash messages */
 .flashes h4 {
     line-height: 2;
 }
 
 
-
+/* top-navbar-log0 */
 #main-logo {                                    
 
-      
-        font-size: 300%;
-       
-        
-        letter-spacing: 2px;
-        text-decoration: none;
-        
-
+    font-size: 300%;
+    letter-spacing: 2px;
+    text-decoration: none;    
 }
-                                   /* LOGO */
+
+
+/* navbar-link items */
 a.head-link{
     color: rgb(52, 214, 160);
     font-family: 'Berkshire Swash', cursive;
     font-weight: 700;
 }
 
-           /* logo extra text */
+
+/* logo extra text */
 h6 > small{
     color: rgb(226, 210, 210);
     font-weight: 400;
@@ -53,6 +51,8 @@ h6 > small{
     margin-left: 300px;
 }
 
+
+/* navbar-anchors */
 nav ul a{
     color: rgb(175, 233, 212);
     font-family: 'Berkshire Swash', cursive;
@@ -60,6 +60,8 @@ nav ul a{
       font-size: 20px;
 }
 
+
+/* for the dropdowns on navbar @base-html */
 .dropdown-content li,
 .dropdown-content li>a {
     color: rgb(126, 173, 173);
@@ -69,14 +71,8 @@ nav ul a{
       background-color: #263238;
 }
 
-footer > .footer-copyright {
 
-     border-radius: 25px 25px 0 0;
-}
-
-
-
-
+/* ul that contain Recipe-images-and content @index-html*/
 .demo-3 {
     position:relative;
     width:90%;
@@ -85,6 +81,8 @@ footer > .footer-copyright {
     float:left;
     margin-right:20px
 }
+
+/* images-and content-container @index-html*/
 .demo-3 figure {
     margin:0;
     padding:0;
@@ -92,6 +90,8 @@ footer > .footer-copyright {
     cursor:pointer;
     margin-left:-50px
 }
+
+/* image- @index-html*/
 .demo-3 figure img {
     display:block;
     position:relative;
@@ -99,6 +99,8 @@ footer > .footer-copyright {
     margin: auto;
     height: 250px;
 }
+
+/* text-container @index-html*/
 .demo-3 figure figcaption {
     display:block;
     position:absolute;
@@ -107,21 +109,26 @@ footer > .footer-copyright {
     -moz-box-sizing:border-box;
     box-sizing:border-box
 }
+
+/* text- @index-html*/
 .demo-3 figure h2 {
     font-family:'Lato';
     color:#fff;
     font-size:20px;
     text-align:center;
 }
+
 .demo-3 figure p {
     display:block;
-    font-family:'Lato';
     font-size:12px;
     line-height:18px;
     margin:0;
     color:#fff;
     text-align:center;
 }
+
+
+/* back of card when it rotate */
 .demo-3 figure figcaption {
     top:0;
     left:0;
@@ -138,22 +145,28 @@ footer > .footer-copyright {
     -moz-transition:all .5s;
     transition:all .5s;
 }
+
+/* for card rotation */
 .demo-3 figure img {
     backface-visibility:hidden;
     -webkit-transition:all .5s;
     -moz-transition:all .5s;
     transition:all .5s
 }
+
+/* for hover and card rotation */
 .demo-3 figure:hover img,figure.hover img {
     -webkit-transform:rotateY(180deg);
     -moz-transform:rotateY(180deg);
     transform:rotateY(180deg)
 }
+
 .demo-3 figure:hover figcaption,figure.hover figcaption {
     -webkit-transform:rotateY(0);
     -moz-transform:rotateY(0);
     transform:rotateY(0)
 }
+
 .ourProjects
 {
 	-webkit-box-sizing: content-box;
@@ -168,6 +181,8 @@ footer > .footer-copyright {
 }
 
 
+/* 
+The Irresistible-container */
 .parallax-container{
 	height: 350px;
 }
@@ -180,14 +195,17 @@ footer > .footer-copyright {
    .input-field input[type=email]:focus + label {
      color: #ab47bc;
    }
+
    textarea:focus.materialize-textarea + label {
    	color: #ab47bc;
    }
+
    /* label underline focus color */
    .input-field input[type=text]:focus {
      border-bottom: 1px solid #ab47bc;
      box-shadow: 0 1px 0 0 #ab47bc;
    }
+
    /* label underline focus color */
    .input-field input[type=email]:focus {
      border-bottom: 1px solid #ab47bc;
@@ -197,6 +215,7 @@ footer > .footer-copyright {
      border-bottom: 1px solid #ab47bc;
      box-shadow: 0 1px 0 0 #ab47bc;
    }
+
    
 .aboutUs
 {
@@ -242,16 +261,7 @@ h4.search-button {
     
 }
 
-
-/* .add-btn {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 20px;
-    border: 5px;
-    border-radius: 15px;
-    margin-right: 30px;
-    color: #fff;
-} */
-
+/* register-button */
 .reg-btn-color{
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
@@ -272,3 +282,9 @@ img.responsive-img{
     margin-right:30px;
 }
 
+
+/* footer-copyRight-div */
+footer > .footer-copyright {
+
+     border-radius: 25px 25px 0 0;
+}
