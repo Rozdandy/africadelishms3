@@ -10,16 +10,17 @@
 
 [Afric & delish](https://afric-delish.herokuapp.com/)
 
- There are about 55 countries on the African continent with a population estimated of 1.3 billion. Inspite of the numerous diverse cultures and ethnicities, the African cuisine or recipes is the least pronounced one among other continents of the world. For instance, here in the Netherlands, the African shops and restaurants that sell her recipes are very few in comparison to the asian continents. Does it mean other continents are not very aware of the African uncountable, tasty, relish, healthy, and energtic African recipes? In other instances, due to the diverse cultures and ethnicities, many indegenous African people are not aware of the various food recipes that available to them from other groups.
+ There are about 55 countries on the continent of Africa with an estimated population of 1.3 billion. Inspite of the diverse cultures and ethnicities, the African cuisine or recipes is the least recognized one among other continents of the world. For instance, in the Netherlands, the African shops and restaurants that sell her recipes are fewer in comparison to the asian continent. Does it mean the other continents are not very aware of the uncountable, tasty, relish, healthy, and energtic African recipes? In other instances, due to the diverse cultures and ethnicities, many indegenous African people are not aware of the various food recipes that available to them from other groups partly due to availability of information.
 
-Therefore, Afric & delish is an online foodbook where users can surf other African recipes, able to register and also submit their country's cuisine. Afric & delish is a recipe website for people who love to explore continental dishes right in their homes. It avail the opportunity for gourmets and epicures to search for tasty, and palatable different African recipes to prepare for their maximum enjoyment. The concept of the foodbook would allow users to explore the available menus, create theirs, edit or update them and also delete them if they are not needed again. The concept of the   CREATE, READ, UPDATE and DELETE (CRUD) are the crux of the lecture for Milestone three Project at Code Institute, which this project would be built upon.
+Therefore, Afric & delish is an online foodbook where users can surf other African recipes, intended users are able to register and also submit their country's cuisine. Afric & delish is a recipe website for people who love to explore continental dishes right in their homes. It avail the opportunity for gourmets and epicures to search for tasty, palatable different African recipes to cook for their maximum enjoyment. The concept of the foodbook would allow users to explore the available menus, create theirs, edit or update them and also delete them if they are not needed again. The concept of the   CREATE, READ, UPDATE and DELETE (CRUD) are the crux of the lecture for Milestone three Project at Code Institute, which this project was be built upon.
 
 
 # **UX (USER EXPERIENCE)**
 
 ## Project objectives
 
-This milestone project is a Data Centric Development module of [Code Institute](https://courses.codeinstitute.net/program/FullstackWebDeveloper)  classes. The aim is to "build an application that allow users to brows, store and access African recipes", using the CRUD operations.
+This milestone project is a Data Centric Development module of [Code Institute](https://courses.codeinstitute.net/program/FullstackWebDeveloper) countries. The aim is to "build an application that allow users to brows, store and access African recipes", using the CRUD operations.
+
 In order to demonstrate these skills, I have decided to build this Afric & delish website, where Africans could perform the CRUD operations in order to furnish the site with different cuisnes in their countries for other people to emulates the methodologies of the same recipe.
 
 
@@ -41,25 +42,25 @@ As a user, I would like to:
  *  be able to search for recipes by names or description.
  *  see all the different categories of the recipes.
  *  know the particular African country which the recipe belongs to.
- *  recieve feedback if scuccessfully performed any of the CRUD operations.
- *  recieve an error message for perform the activities that is not within the scope of the website or there is an issue with database.
+ *  recieve feedback if successfully performed any of the CRUD operations.
+ *  recieve an error message for perform the activities that is not within the scope of the website or there is an issue with the database.
 
 
-#### *Admin Objectives:*
+### *Admin Objectives:*
 
-In addition to the aforementioned user objectives above, as an Admin, i would like:
+In addition to the aforementioned user objectives above, as an Admin, I would like to:
 
  *  be able add new categories and recipes.
  *  edit categories and recipes, in order to update them.
- *  delete categories, and recipes, in order to regulate and coordinates them.
+ *  delete categories, and recipes, in order to regulate, coordinates, maintain and ensure comformity to standards.
 
-### Developer objectives
+### *Developer objectives*
 
  As a developer, to be able to demonstrate learnt skills in terms of:
 
  * providing a simple platform where users could perform CRUD operations.
- * good use of Jinja templating, Python, non-relational database MongoDb
- * good use materialize library combine with JavaScript knowledge.
+ * good use of Jinja templating, Python, Flask, non-relational database MongoDb.
+ * good use of materialize library combine with JavaScript knowledge.
  * how to make the website lives by deploying to Heroku.
 
 
@@ -69,15 +70,16 @@ The concept behind this site is just to enable individual culture and nations ac
 
 #### Fonts
 
-[Google Fonts!](https://fonts.google.com/) Two main fonts were used for the whole sites:
+[Google Fonts!](https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@500&family=Exo+2:wght@300&display=swap) Three main fonts were used for the whole sites:
 
-* Supermercado for the body with fall back on san serif.
-* Langar for the headers with fall back on san serif.
+* Exo+2: for the body with fall back on cursive.
+* Berkshire+Swash&family: for the headers with fall back on cursive.
+* Dancing+Script: for headers mute message and fall back on cursive.
 
 
 #### **Colour Scheme**
 
-The developer used [eggradients](https://www.eggradients.com/shades-of-green-color) to choose colors when building the website. Particularly, the follwoing colors were used which are bright to make the site more appealling to sight:
+The developer used [materialize](https://materializecss.com/getting-started.html)  to choose colors when building the website. Particularly, the follwoing colors were used which are bright to make the site more appealling to sight:
 
  * #d32f2f (red color)
  * #455a64  (blue-grey color)
@@ -88,24 +90,24 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
  ## **Wireframe**
 
- [Balsamiq App](https://balsamiq.com/) was used for the design architechture and  the site mockups. Although, there were some minor changes in the design but mostly the layout on the app gave the guidance, a step by step guard to build the final website. Below is the link to the wireframe for the desktop and mobile device.
+ [Balsamiq App](https://balsamiq.com/) was used for the design architechture and the site mockups. Although, there were some minor changes in the design but mostly the layout on the app gave the guidance. Below is the link to the wireframe for the desktop and mobile device.
 
 **View all**
 
  * [Wireframe](wireframe/ms3mockup.pdf)
         
 
-# **FEATURES**
+# FEATURES
 
-  **Existing Features**
+  ## Existing Features
 
 ### Register Account
 
-* The registeration page allow intended users to register for free to create their own account. For security reason, there is a built-in authorization and    authentication  to check certain criteria to be met before an   account is validated. All passwords are hashed for further securities.
+* The registeration page allow intended users to register for free to create their own account. For security reason, there are built-in authorization and    authentication  to check certain criteria to be met before an account is validated. All passwords are hashed for further securities.
 
 ### Log In
 
-* This is for users that registered, more authentication and authorization was embedded to check that the hashed passwords and username if they matched in the database.
+* This is for users that registered, more authentication and authorization was embedded to ensure that the hashed passwords and username matched in the database.
 
 ### Log Out
 
@@ -113,8 +115,7 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 ### View All Recipes
 
-* On the All Recipes link on the Navbar, which will open All recipes page when clicked, it displays all the available recipes on the website.
-
+* On the link on the Navbar, which will open All recipes page when clicked, it displays all the available recipes on the website.
 
 ### Search Recipes
 
@@ -125,27 +126,21 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 ### Edit or Update Recipe
 
 
+## Features to be Implemented in the Future  
 
-## Future Features to be Implemeneted
-
- * Pagination
- * Google login
- 
+ * Functionl emails
+ * Number of views on recipe and likes
  * To bind recipes to national related country
  * Lazy loading images
  * Prevent duplicate subscribers
  * User profiles with description, avatar, post list
  * Page loading animation
  * Subscription letters
- * Functionl emails
+ * Pagination
  * Admin console
- * Contact form and admin to be able to see all recieved messages directly in the admin console
  * Recipe image url validation
  * Sort recipes by tag, cousine, cook or prep time, even more specific dietary needs
  * Recipe Comments
-
-
-
 
 
 # **TECHNOLOGY USED**
@@ -154,13 +149,13 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 ### Tools  
 
-* **Git**: It was used for version control which uses the Gitpod terminal to commit to Git and Push codes to GitHub
+* **Git**: It was used for version control which uses the Gitpod terminal, Git was used to commit and Push codes to GitHub.
 * **GitHub**:         [GitHub](https://github.com/) Developer used GitHub as a project repository to save.
 * **Gitpod**:         [GitHub](https://www.gitpod.io/) The project used the Gitpod IDE as my workspace to develop the website. It is linked to GitHub repository to store data when coding.
 * **Icons**:          [Font Awesome](https://fontawesome.com/) Social Media Icons were taken from this site.
 * **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
 
- ## Front-End Technologies
+### Front-End Technologies
 
 * [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML): HTML/HTML5 the language used to create and as the markup text to add content to the website.  
 * [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS): It provides the styling for the website.
@@ -168,7 +163,8 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 * [materialize](https://materializecss.com/getting-started.html) Used to design the  mobile-first responsive layout for the website, forms and accordion.
 
 
-## Back-End Technologies
+### Back-End Technologies
+
 *  Flask
 
     * [**Flask 1.0.2**](https://flask.palletsprojects.com/en/1.1.x/): A microframework used in python.
@@ -188,10 +184,6 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 * **CSS validator**:  [CSS validator](https://jigsaw.w3.org/css-validator/) The site was used to test for the validity of my CSS code. 
 * **HTML validator**: [HTML validator](https://validator.w3.org/) The site was used to test for the validity of my HTML code.
 * **Hover.css**:      [Hover.css](https://ianlunn.github.io/Hover/) The site was used on the navigation bar links and Social Media icons in the footer to create an hovering effects.
-* **Balsamiq**:       [Balsamiq](https://balsamiq.com/) The site was used to create the wireframes during the design stage of the project.
-* **freeformatter**:  [freeformatter](https://www.freeformatter.com/html-formatter.html) The site was used to format HTML.
-* **Lighthouse**:     [Balsamiq](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) To audit the site perfomance and accessibility.
-* **Am I Responsive?**:[Am I Responsive?](http://ami.responsivedesign.is/) It was used to test the responsiveness of the site and to take screenshot of devices.
 
 
 
@@ -199,17 +191,17 @@ The developer used [eggradients](https://www.eggradients.com/shades-of-green-col
 
 ***Sites Validation***
 
+* **Lighthouse**:     [Balsamiq](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) To audit the site perfomance and accessibility.
+
+* **Am I Responsive?**:[Am I Responsive?](http://ami.responsivedesign.is/) It was used to test the responsiveness of the site and to take screenshot of devices.
+
 * [HTML-Validator](https://validator.w3.org/#validate_by_input"):  The site does not really understand the Jinja templating syntaxes, such as the {% for %} {% endfor %} which resulted in many errors but outside that, all the codes worked perfectly.
 
-
-* [Jshint](https://jshint.com/): When using the tool some warnings were flagged which mainly were the use of ES6 (use 'esversion: 6'). But the codes work perfectly however, i have taken note of that for next project.
-[Javascript test](static/testing/jsms3.png).
-
+* [Jshint](https://jshint.com/): When using the tool some warnings were flagged which mainly were the use of ES6 (use 'esversion: 6'). But the codes work perfectly. However, I have taken note of that for next project. [Javascript test](static/testing/jsms3.png).
 
 * The [CSS validator](https://jigsaw.w3.org/css-validator/) was without any issues [CSS test](static/testing/cssms3.png).
 
-* The [PEP*](http://pep8online.com/checkresult) was without any issues [PEP8 test](static/testing/pep8.png).
-
+* The [PEP8](http://pep8online.com/checkresult) was without any issues [PEP8 test](static/testing/pep8.png).
 
 * Furthermore, the website was tested on the following: It works perfectly in them.
 
