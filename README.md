@@ -210,117 +210,101 @@ The developer used [materialize](https://materializecss.com/getting-started.html
       * Phones and Tabs: iPad Pro, different Iphone series and androids
 
 
-## **Testing user stories from UX section**
+# **Testing user stories from UX section**
 
-#### First-time visitors goals:
+#### First-time visitors goals
 
-1. As a visitor, I want to be able to view the site in all modern devices, such as the desktop, tablet and mobile etc.
+    As a visitor, I want to be able:
 
-      * The visitor can visite the website on computer, laptop, tablet and phone.
+1. to view the site in all modern devices, such as the desktop, tablet and mobile etc.
 
-2  Able to see all recipes as a visitor
+      * The visitor can visite the website on computers, laptops, tablets and phones.
 
-    * The vistors can navigate through the site form the homepage with the navbar. 
-    * The navbar is at the top of the site. They niew the whole recipes by click on the "View all categories" link in the navbar
+2  to see all recipes.
+
+    * The vistors can navigate through the site form the homepage through the links on the navbar. 
+    * The navbar is at the top of the site. They ca view the whole recipes by click on the "View all categories" link in the navbar
     * There is a hamburger menu for the mobile view to aid navigations.
     * From the "View all categories" link , they can click on categories such breakfast menu, lunch etc.
 
-3  Register to be a member and a regular user
+3  register to be a member and a regular user.
     
     * The visitor can navigate to the register page by clicking on the "register" link on the navbar. 
     * There on the page, intended user can register.
 
-4  To be able to log in after registeration
+4  to be able to log in after registeration.
 
     * A user who has registered can easily log in from the navbar at the top of the site from any page by clicking on the "log in" link.
-    * The page will open, Therefore, user can log in fully.
+    * The page will open, therefore, user can log in fully.
 
-
-5. Able to search for recipes by names or description
+5. to search for recipes by names or description.
 
     * This operation could be performed by both regular users and non-regulars
     * This can be achieved by clicking the "View All categories" button on the navbar.
     * There on the page the user can easily use the search engine to check for any particular recipe.
 
-
-6. Able to search for recipes by names or description
-
-    * This operation could be performed by both regular users and non-regulars
-    * This can be achieved by clicking the "View All categories" button on the navbar.
-    * There on the page the user can easily use the search engine to check for any particular recipe either by name or description.
-
-
-7. Able to search for recipes categories
+6. to search for recipes by categories
 
     * This operation could be performed by both regular users and non-regulars
     * This can be achieved by clicking the "View All categories" button on the navbar.
     * From the drop-downs, they can click on any category and the related recipes will be opened.
 
+7. to know the particular African country which the recipe belongs.
 
-
-8. Able to know the particular African country which the recipe belongs to.
-
-    * This operation could be performed by both regular users and non-regulars
+    * This operation could be performed by both regular users and non-regular users.
     * This can be achieved by clicking on a particular recipe.
-    * The information about the recipe is revealed which include the nationality of such cuisine
+    * The information about the recipe is revealed which include the nationality of such cuisine.
 
 
 #### User/member goals:
 
-9. View my own profile
+8. View my own profile
 
     * Once a user, and has login, he/she is automatically taken to their profile page.
     * There, they can see all their recipes that they have posted and may want to post more by click on a CTA button.
 
-10. Add my recipes
+9. Add my recipes
 
     * As as a user, he/she can post recipes, the option to post recipes is only available to users on the navbar.
-    * A user can click on the link on the navbar and the page will open.
+    * A user can click on the "Add Recipes" link on the navbar and the page will open.
   
+10.  To see instructions on how to add a recipe
 
-11.  To see instructions on how to add a recipe
-
-    * Once the user click on the link "Add Recipe" from the navbar, the form will opened.
+    * Once the user click on the link "Add Recipe" from the navbar, the form will open.
     * The input form is easy and direct to fill, and they can submit after filling in all the requirements by hitting the   green "ADD RECIPE" button.
 
-
-12. To able to edit or update their recipes
+11. To able to edit or update their recipes
 
     * This can be achieved when a user click on their posted recipes.
     * There is an option to edit at the bottom of the page for the said recipe.
-    * When they click on the edit button, it takes them to form which is already pre-selected for the said recipe.
-    * They choose to edit in order to update or just cancel to leave the recipe.
+    * When they click on the edit button, it takes them to the form which is already pre-selected for the said recipe.
+    * They can decide to edit in order to update or just cancel to leave the recipe.
 
-
-13.  To be able to delete my recipes that are not needed again
+12.  To be able to delete my recipes that are not needed again
 
     * This can be achieved when a user click on their posted recipes.
     * There is an option to delete sitting next to the edit button at the bottom of the page for the said recipe.
     * When they click on the delete button, it wipes off immediately.
 
-
-14. To be able to log out
+13. To be able to log out
 
     * This can be achieved when a registered user click on log out button on the navbar.
-    * THis button is only available to users that logged in.
-
-
+    * This button is only available to users that logged in.
 
 14. To be able recieve feedback if they scuccessfully performed any of the CRUD operations
 
-    * User recieve feedback in form flash messages for certain action carried out such as; registeration, login, logout, poste recipes etc.
-
+    * User recieve feedback in form of flash messages for certain action carried out on the website such as; registeration, login, logout, poste recipes etc.
 
 15. To be able to recieve an error message for perform the activities that is not within the scope of the website or there is an issue with database.
 
-    * User either gets 404/ or 405 message performing functionalities tat is not within the scope of the site.
+    * User either gets 404/ or 405 message performing functionalities that are not within the scope of the site.
 
 
-#### *Admin Objectives:*
+#### Admin Objectives
 
 In addition to the aforementioned above, The Admin can:
 
- 16. To able be able add new categories and recipes
+ 16. add new categories and recipes.
     
     * Just like any other users, the admin is able to perfom all the functionalities above which include, adding categories and recipes.
     * Only the admin can:
@@ -328,23 +312,22 @@ In addition to the aforementioned above, The Admin can:
         * Add, edit categories and recipes, for the site.
         * Delete categories, and recipes, in order to regulate unappropriate submissions.
 
-    * Those operations can be performed, when the recorgnize admin log in
-    * The admin profile has access to all posted recipes by users and categories unlike users' that have access to their individual posted recipes in their profiles
+    * Those operations can be performed, when the recognize admin log in into the site.
+    * The admin profile has also access to all posted recipes by users and categories unlike users' that have access to their individual posted recipes in their profiles only.
 
 
 ### Developer objectives
     By building the website, the following skills were demonstrated by the developer:
 
  * Able to perform the CRUD operations using python, jinja, MongoDb etc.
- * good use of Jinja templating, Python, non-relational database MongoDb
+ * good use of Jinja templating, Python, iterate the non-relational database of MongoDb.
  * good use of materialize library combine with JavaScript knowledge.
  * how to make the website lives by deploying to Heroku.
 
 
-
 ## **Manual Testing**
 
-#### **1. Register Account:**
+#### Register Account
 
 Most of the features in the site are based on securities measures and are built on Defensive programming.
 
@@ -352,13 +335,13 @@ Most of the features in the site are based on securities measures and are built 
 * In the site and at the top is the navbar, user can click on register link on the navbar and it will navigate them to the page.
 * The intended user's username has to be between 5-15 which could be characters or numbers or combined.
 * The password has to be between 5-20 characters and must contain at least one capital letter, lowercases and atleast a number.
-* Attempt to use username/password that is not compliant with the specified requirements and you will get; (match the requested format) tooltips.
+* Attempt to use username/password that is not compliant with the specified requirements and you will get: "match the requested format" tooltips.
 
-#### **Login
+#### Login
 
  This is to enable registered user to access the pages and their profiles
     
-    * User trying to brut force their ways in with wrong credentials will get: "Incorrect Username and/or Password"
+    * User trying to brut force their ways in with wrong credentials would get: "Incorrect Username and/or Password"
     * Similarly, user submit an empty form will get tooltip pop-up like:  "Fill out this field"
 
 #### Post recipe
@@ -370,10 +353,9 @@ Most of the features in the site are based on securities measures and are built 
 * After filling all the fields completely, user can click the "Add Recipe" green button to submit.
 * After flash message will show for scuccessfully submissions.
 
-
 #### Edit or Update Recipe
 
- This feature is to enable users to update or editing an existing recipes posted by them 
+ This feature is to enable users to update or edit an existing recipes posted by them 
 
 * On the website user can click on the recipes posted by them from their profile page.
 * Also, they click on the recipe created by them on the main page.
@@ -388,34 +370,31 @@ Most of the features in the site are based on securities measures and are built 
     This operation can only be carried out by users that have posted recipes to their names.
 
 A 
+
 * On viewing a specific recipe posted by a user, to bottom of the page is red "Delete" button.
-
 * A click on it will instantly remove the recipe completely.
-
 * Users only see the "EDIT and DELETE" buttons of the recipes posted by them.
 
 
 
-B   * A user can also delete a recipe from their Profile page.
+B  
 
+* A user can also delete a recipe from their Profile page.
 * On the accordion on their profile page, their are the "DELETE and EDIT" buttons.
-
 * When a user click on the red delete button, there is a pop-up dialogue modal that will ask, if user is sure they want to delete the said recipes.
-
 * User can either choose to delete or cancel
 
 
 ####  Logout
 
-        This can only be carried out by those were already log in
+This can only be carried out by those were already log in
 
-        * On the navbar is the logout option for the users.
-        * click on it will log them out and will reidrect to login page.
-
+    * On the navbar is the logout option for the users.
+    * click on it will log them out and will reidrect to login page.
 
 ## Bugs and resolves
 
-Most of the errors encoountered were syntaxes errors, especially in using Jinja templating to carryout for loops operations, the one that was most prominent was a floating footer in 404/.html pages and some other pages with less data contents. Below is example of one of the images;
+Most of the errors encountered were syntaxes errors, especially in using Jinja templating to carryout for loops operations, the one that was most prominent was a floating footer in 404/.html pages and some other pages with less data contents. Below is example of one of the images;
 
  [bug](static/testing/floatresult.png)
 
@@ -423,17 +402,7 @@ Most of the errors encoountered were syntaxes errors, especially in using Jinja 
 
 All the floats were resolved by applying this css code form materialise library
 
- body {
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
+ body {display: flex; min-height: 100vh; flex-direction: column;} main {flex: 1 0 auto;}
 
 
 # **DEPLOYMENT**
