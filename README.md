@@ -210,6 +210,15 @@ The developer used [materialize](https://materializecss.com/getting-started.html
       * Phones and Tabs: iPad Pro, different Iphone series and androids
 
 
+## Information Architecture
+
+MongoDB atlas was used to store data for the  project has three collections in the database. The Schema for the data is below:
+
+<img src="static/testing/dataschemat.png">
+
+
+
+
 # **Testing user stories from UX section**
 
 Note: Developer entererd lot of gibberish text such as 'fdlklbjobljbknjxbk' as a different user in order to text the site.
@@ -453,13 +462,13 @@ The website was developed using GitPod IDE and using Git to push to store them i
                 simple_description: <string>
                 prep_duration: <string>
                 ingredients: <array>
-                adult_plate: <string>
+                adult_plates: <string>
                 ingredient_name: <array>
                 cook_directions: <array>
                 cook_duration: <string>
                 cuisine: <string>
                 img_url: <string>
-                author: <ObjectId>
+                author: <string>
                 date_posted: <string>
 
 
@@ -467,7 +476,7 @@ The website was developed using GitPod IDE and using Git to push to store them i
 
                 _id: <ObjectId>
                 username: <string>
-                user_password: <string>
+                password: <string>
 
 
     *             Categories
