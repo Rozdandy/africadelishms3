@@ -220,19 +220,19 @@ The developer used [materialize](https://materializecss.com/getting-started.html
 
       * The visitor can visite the website on computers, laptops, tablets and phones.
 
-2  to see all recipes.
+2.  to see all recipes.
 
     * The vistors can navigate through the site form the homepage through the links on the navbar. 
     * The navbar is at the top of the site. They ca view the whole recipes by click on the "View all categories" link in the navbar
     * There is a hamburger menu for the mobile view to aid navigations.
     * From the "View all categories" link , they can click on categories such breakfast menu, lunch etc.
 
-3  register to be a member and a regular user.
+3.  register to be a member and a regular user.
     
     * The visitor can navigate to the register page by clicking on the "register" link on the navbar. 
     * There on the page, intended user can register.
 
-4  to be able to log in after registeration.
+4.  to be able to log in after registeration.
 
     * A user who has registered can easily log in from the navbar at the top of the site from any page by clicking on the "log in" link.
     * The page will open, therefore, user can log in fully.
@@ -304,7 +304,7 @@ The developer used [materialize](https://materializecss.com/getting-started.html
 
 In addition to the aforementioned above, The Admin can:
 
- 16. add new categories and recipes.
+16. add new categories and recipes.
     
     * Just like any other users, the admin is able to perfom all the functionalities above which include, adding categories and recipes.
     * Only the admin can:
